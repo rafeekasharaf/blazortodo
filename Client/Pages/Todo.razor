@@ -1,0 +1,209 @@
+@page "/todo"
+@using ToDo.Shared
+@inject HttpClient Http
+@inject IJSRuntime JSRuntime
+
+
+
+<div class="main">
+    <div class="container-fluid " id="page-content">
+        <div class="padding">
+            <div class="row  d-flex justify-content-start add-title-container">
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <input class="form-control form-control-lg add-text" type="text" @bind-value=@newTodoTitle
+                            placeholder="Title for ToDo">
+
+                        <button type="button" @onclick="AddTodoTitle" class="btn btn-outline-success btn-lg">Add Title</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container-fluid no-padding">
+                        <div class="card-columns">
+                            <Dropzone Items="ToDoList" InstantReplace="true" TItem="Category">
+                                <div class="card">
+                                    <div class="card-header"> @context.Title</div>
+                                    <div class="card-body">
+                                        <div class="list-wrapper">
+                                            <div class="todo-list">
+                                                    @if(@context.ToDo != null ){
+                                                        <ul>
+                                                        @foreach (var items in @context.ToDo)
+                                                        {   
+                                                                <li>@items.Title</li>
+                                                        }
+                                                        </ul>
+                                                    }
+                                                    else{
+                                                        <div class="alert alert-info mt-3 mb-3 pt-5 pb-5" style="font-size: 13px;" >
+                                                            Please add your todo items here
+                                                        </div>
+                                                    }
+                                            </div>
+                                            <div class="todo-add d-flex">
+                                                <input class="form-control" type="text" @bind-value=@newTodo 
+                                                placeholder="Add items">
+                                                @{
+                                                    var todoCategory = @context;
+                                                }
+                                                <button type="button"                                                 
+                                                    @onclick="() => AddTodoItem(todoCategory)"
+                                                 class="btn btn-outline-success">Add</button>
+                                            </div>
+
+                                        @* <ul class="d-flex flex-column-reverse todo-list">
+                                            <li>
+                                            <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"> For what
+                                            reason would it be advisable. <i class="input-helper"></i></label> </div> <i
+                                            class="remove mdi mdi-close-circle-outline"></i>
+                                            </li>
+                                            <li class="completed">
+                                            <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"
+                                            checked=""> For what reason would it be advisable for me to think. <i
+                                            class="input-helper"></i></label> </div> <i class="remove mdi mdi-close-circle-outline"></i>
+                                            </li>
+                                            <li>
+                                            <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"> it be
+                                            advisable for me to think about business content? <i class="input-helper"></i></label> </div> <i
+                                            class="remove mdi mdi-close-circle-outline"></i>
+                                            </li>
+                                            <li>
+                                            <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"> Print
+                                            Statements all <i class="input-helper"></i></label> </div> <i
+                                            class="remove mdi mdi-close-circle-outline"></i>
+                                            </li>
+                                            <li class="completed">
+                                            <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"
+                                            checked=""> Call Rampbo <i class="input-helper"></i></label> </div> <i
+                                            class="remove mdi mdi-close-circle-outline"></i>
+                                            </li>
+                                            <li>
+                                            <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"> Print
+                                            bills <i class="input-helper"></i></label> </div> <i
+                                            class="remove mdi mdi-close-circle-outline"></i>
+                                            </li>
+                                            </ul> *@
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </Dropzone>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>  
+
+
+</div>
+
+@code {
+      
+    private string newTodo, newTodoTitle;
+
+    public List<string> Items = new List<string>()
+    {
+        "1", "2", "3", "4", "5", "6"
+    };
+
+    private Category[] categories ;
+    private Category newCat = new Category();
+
+    public List<Category> ToDoList = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        ToDoList = new List<Category>();
+        categories = await Http.GetFromJsonAsync<Category[]>("api/category");
+        //await JSRuntime.InvokeVoidAsync("alert", System.Text.Json.JsonSerializer.Serialize(categories)); 
+        if (categories != null ) {
+            foreach (var category in categories){
+                 ToDoList.Add(category);
+            }
+        } 
+
+    }
+
+    private async Task AddTodoTitle()
+    {
+      
+        newCat = new  Category();
+
+        newCat.Title = newTodoTitle;
+        newCat.Active = 1;
+        newCat.Sort = 1;       
+        
+
+        await Http.PostAsJsonAsync<Category>("api/category", newCat);
+        await OnInitializedAsync();
+
+        newTodoTitle = "";
+        
+    }
+
+    private async Task AddTodoItem(Category cat) {
+        newCat = new Category();
+        newCat = cat;
+        
+        List<TodoItem> mydoList = new List<TodoItem>();
+        mydoList.Add(new TodoItem(){Title=newTodo, Active=1, Sort=1});
+
+        if (newCat.ToDo != null) {
+            foreach (var items in cat.ToDo)
+            {   
+                mydoList.Add(new TodoItem(){Title=items.Title, Active=items.Active, Sort=items.Sort});
+            } 
+        }
+        
+        newCat.ToDo = mydoList; 
+        await Http.PutAsJsonAsync<Category>("api/category/"+newCat.CategoryID, newCat);
+
+        await OnInitializedAsync();
+        newTodo = "";
+    }
+    public void OnItemDrop()
+    {
+       // DropedItem = item;
+        StateHasChanged();
+    }
+    public void OnReplacedItemDrop()
+    {
+       // replacedItem = item;
+        StateHasChanged();
+    }
+
+   /* public List<TodoItem> ToDoList = new List<TodoItem>() {
+       new TodoItem(){Title = "Style this list"},
+        new TodoItem(){Title = "Fix a bug"},
+        new TodoItem(){Title = "Build a feature"},
+        new TodoItem(){Title = "Create a PR"}
+    }; */
+
+  /*  public List<TodoItem> MyToDoList = new List<TodoItem>()
+    {
+            new TodoItem(){
+                Title = "Drag this item", 
+                TaskList=[
+                    
+                ]            
+            },
+            new TodoItem(){
+                Title = "Add another item",
+                TaskList = []
+            },
+            new TodoItem(){
+                Title = "Remove this item",
+                TaskList = []
+            }
+                
+          //  new TodoItem(){Title = "Style this list"},
+           // new TodoItem(){Title = "Fix a bug"},
+           // new TodoItem(){Title = "Build a feature"},
+           // new TodoItem(){Title = "Create a PR"},
+    }; */
+}

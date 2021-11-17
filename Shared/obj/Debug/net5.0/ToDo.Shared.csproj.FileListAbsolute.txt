@@ -1,0 +1,12 @@
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Shared\bin\Debug\net5.0\ToDo.Shared.deps.json
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Shared\bin\Debug\net5.0\ToDo.Shared.dll
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Shared\bin\Debug\net5.0\ref\ToDo.Shared.dll
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Shared\bin\Debug\net5.0\ToDo.Shared.pdb
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Shared\obj\Debug\net5.0\ToDo.Shared.csproj.AssemblyReference.cache
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Shared\obj\Debug\net5.0\ToDo.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Shared\obj\Debug\net5.0\ToDo.Shared.AssemblyInfoInputs.cache
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Shared\obj\Debug\net5.0\ToDo.Shared.AssemblyInfo.cs
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Shared\obj\Debug\net5.0\ToDo.Shared.csproj.CoreCompileInputs.cache
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Shared\obj\Debug\net5.0\ToDo.Shared.dll
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Shared\obj\Debug\net5.0\ref\ToDo.Shared.dll
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Shared\obj\Debug\net5.0\ToDo.Shared.pdb
