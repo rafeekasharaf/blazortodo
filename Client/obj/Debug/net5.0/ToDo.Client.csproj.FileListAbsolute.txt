@@ -646,5 +646,3 @@ D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\obj\Debug\net5.0\build-gz\pfQQvOTj.gz
 D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\bin\Debug\net5.0\wwwroot\_framework\MongoDB.Bson.dll.gz
 D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\bin\Debug\net5.0\wwwroot\_framework\MongoDB.Bson.dll
 D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\obj\Debug\net5.0\build-gz\7knK3rgq.gz
-D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\obj\Debug\net5.0\RazorDeclaration\Shared\LoadingScreen.razor.g.cs
-D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\obj\Debug\net5.0\Razor\Shared\LoadingScreen.razor.g.cs
