@@ -13,77 +13,77 @@ namespace ToDo.Client.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+#line 1 "d:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+#line 2 "d:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+#line 3 "d:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+#line 4 "d:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+#line 5 "d:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+#line 6 "d:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+#line 7 "d:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+#line 8 "d:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+#line 9 "d:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
 using ToDo.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+#line 10 "d:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
 using ToDo.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+#line 11 "d:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
 using Plk.Blazor.DragDrop;
 
 #line default
