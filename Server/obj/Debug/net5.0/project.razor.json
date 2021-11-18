@@ -4351,6 +4351,796 @@
         }
       },
       {
+        "HashCode": 718338638,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Internal.ResourceManager",
+        "AssemblyName": "Syncfusion.Blazor.Core",
+        "Documentation": "\n            <summary>\n            Resource manager component for loading init interop script in .NET Core 3.0 applications.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ResourceManager"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "LocaleKeys",
+            "TypeName": "System.Collections.Generic.List<System.String>",
+            "Documentation": "\n            <summary>\n            Add the component and its dependent component locale keys from the LocaleService/GetMappingLocale method.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "LocaleKeys"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Internal.ResourceManager"
+        }
+      },
+      {
+        "HashCode": -1894221613,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Internal.ResourceManager",
+        "AssemblyName": "Syncfusion.Blazor.Core",
+        "Documentation": "\n            <summary>\n            Resource manager component for loading init interop script in .NET Core 3.0 applications.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Syncfusion.Blazor.Internal.ResourceManager"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "LocaleKeys",
+            "TypeName": "System.Collections.Generic.List<System.String>",
+            "Documentation": "\n            <summary>\n            Add the component and its dependent component locale keys from the LocaleService/GetMappingLocale method.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "LocaleKeys"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Internal.ResourceManager",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -852522823,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Internal.SyncfusionLicense",
+        "AssemblyName": "Syncfusion.Blazor.Core",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SyncfusionLicense"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Internal.SyncfusionLicense"
+        }
+      },
+      {
+        "HashCode": 134366008,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Internal.SyncfusionLicense",
+        "AssemblyName": "Syncfusion.Blazor.Core",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Syncfusion.Blazor.Internal.SyncfusionLicense"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Internal.SyncfusionLicense",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1373492779,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Spinner.SpinnerEvents",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Configure event handlers for the Spinner component.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SpinnerEvents"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Created",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.Object>",
+            "Documentation": "\n            <summary>\n            Event triggers after the Spinner is created.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Created",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OnBeforeOpen",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Spinner.SpinnerEventArgs>",
+            "Documentation": "\n            <summary>\n            Event triggers before the Spinner is opened.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "OnBeforeOpen",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OnBeforeClose",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Spinner.SpinnerEventArgs>",
+            "Documentation": "\n            <summary>\n            Event triggers before the Spinner is closed.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "OnBeforeClose",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Destroyed",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.Object>",
+            "Documentation": "\n            <summary>\n            Event triggers after the Spinner is destroyed.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Destroyed",
+              "Components.EventCallback": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.SpinnerEvents"
+        }
+      },
+      {
+        "HashCode": -1965831641,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Spinner.SpinnerEvents",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Configure event handlers for the Spinner component.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Syncfusion.Blazor.Spinner.SpinnerEvents"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Created",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.Object>",
+            "Documentation": "\n            <summary>\n            Event triggers after the Spinner is created.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Created",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OnBeforeOpen",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Spinner.SpinnerEventArgs>",
+            "Documentation": "\n            <summary>\n            Event triggers before the Spinner is opened.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "OnBeforeOpen",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OnBeforeClose",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<Syncfusion.Blazor.Spinner.SpinnerEventArgs>",
+            "Documentation": "\n            <summary>\n            Event triggers before the Spinner is closed.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "OnBeforeClose",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Destroyed",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.Object>",
+            "Documentation": "\n            <summary>\n            Event triggers after the Spinner is destroyed.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Destroyed",
+              "Components.EventCallback": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.SpinnerEvents",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -26375465,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Spinner.SpinnerTemplates",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Configure the template of the Spinner.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SpinnerTemplates"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Template",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Defines the template of the Spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Template",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.SpinnerTemplates"
+        }
+      },
+      {
+        "HashCode": -1617512551,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Spinner.SpinnerTemplates",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Configure the template of the Spinner.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Syncfusion.Blazor.Spinner.SpinnerTemplates"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Template",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Defines the template of the Spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Template",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.SpinnerTemplates",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 2127287794,
+        "Kind": "Components.ChildContent",
+        "Name": "Syncfusion.Blazor.Spinner.SpinnerTemplates.Template",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Defines the template of the Spinner.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Template",
+            "ParentTag": "SpinnerTemplates"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.SpinnerTemplates.Template",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": -1051278160,
+        "Kind": "Components.ChildContent",
+        "Name": "Syncfusion.Blazor.Spinner.SpinnerTemplates.Template",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Defines the template of the Spinner.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Template",
+            "ParentTag": "Syncfusion.Blazor.Spinner.SpinnerTemplates"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.SpinnerTemplates.Template",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1739840163,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Spinner.SfSpinner",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Represents the spinner component that displays when spinner is shown.\n            </summary>\n            <exclude /> \n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SfSpinner"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Label",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Specifies the label for the Spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Label"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "CssClass",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Specifies the CSS class name that can be appended with the root element of the Spinner.\n            One or more custom CSS classes can be added to a Spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "CssClass"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ChildContent",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <exclude />\n            <summary>\n            Specified content of the Spinner element.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "ChildContent",
+              "Components.ChildContent": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Visible",
+            "TypeName": "System.Boolean",
+            "Documentation": "\n            <summary>\n            Specifies the value that represents whether the Spinner component is visible.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Visible"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "VisibleChanged",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.Boolean>",
+            "Documentation": "\n            <summary>\n            Gets or sets a callback of the bound value.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "VisibleChanged",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Size",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Specifies the size of the Spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Size"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ZIndex",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Specifies the z-order for the Spinner.\n            By default the value is AUTO.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "ZIndex"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Type",
+            "TypeName": "Syncfusion.Blazor.Spinner.SpinnerType",
+            "IsEnum": true,
+            "Documentation": "\n            <summary>\n            Specifies a theme of the spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Type"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.SfSpinner"
+        }
+      },
+      {
+        "HashCode": -466641464,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Spinner.SfSpinner",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Represents the spinner component that displays when spinner is shown.\n            </summary>\n            <exclude /> \n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Syncfusion.Blazor.Spinner.SfSpinner"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Label",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Specifies the label for the Spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Label"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "CssClass",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Specifies the CSS class name that can be appended with the root element of the Spinner.\n            One or more custom CSS classes can be added to a Spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "CssClass"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ChildContent",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <exclude />\n            <summary>\n            Specified content of the Spinner element.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "ChildContent",
+              "Components.ChildContent": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Visible",
+            "TypeName": "System.Boolean",
+            "Documentation": "\n            <summary>\n            Specifies the value that represents whether the Spinner component is visible.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Visible"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "VisibleChanged",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.Boolean>",
+            "Documentation": "\n            <summary>\n            Gets or sets a callback of the bound value.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "VisibleChanged",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Size",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Specifies the size of the Spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Size"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ZIndex",
+            "TypeName": "System.String",
+            "Documentation": "\n            <summary>\n            Specifies the z-order for the Spinner.\n            By default the value is AUTO.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "ZIndex"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Type",
+            "TypeName": "Syncfusion.Blazor.Spinner.SpinnerType",
+            "IsEnum": true,
+            "Documentation": "\n            <summary>\n            Specifies a theme of the spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Type"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.SfSpinner",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 260615393,
+        "Kind": "Components.ChildContent",
+        "Name": "Syncfusion.Blazor.Spinner.SfSpinner.ChildContent",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <exclude />\n            <summary>\n            Specified content of the Spinner element.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChildContent",
+            "ParentTag": "SfSpinner"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.SfSpinner.ChildContent",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": 1097541949,
+        "Kind": "Components.ChildContent",
+        "Name": "Syncfusion.Blazor.Spinner.SfSpinner.ChildContent",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <exclude />\n            <summary>\n            Specified content of the Spinner element.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChildContent",
+            "ParentTag": "Syncfusion.Blazor.Spinner.SfSpinner"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.SfSpinner.ChildContent",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 453819984,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Spinner.Internal.Bootstrap",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Represents the Spinner's Bootstrap class.\n            </summary>\n            <exclude />\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Bootstrap"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Show",
+            "TypeName": "System.Boolean",
+            "Documentation": "\n            <summary>\n            Gets or sets a value indicating whether visible status of the spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Show"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "TypeUpdate",
+            "TypeName": "System.Boolean",
+            "Documentation": "\n            <summary>\n            Gets or sets a value indicating whether type of the spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "TypeUpdate"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.Internal.Bootstrap"
+        }
+      },
+      {
+        "HashCode": 148552621,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Spinner.Internal.Bootstrap",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Represents the Spinner's Bootstrap class.\n            </summary>\n            <exclude />\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Syncfusion.Blazor.Spinner.Internal.Bootstrap"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Show",
+            "TypeName": "System.Boolean",
+            "Documentation": "\n            <summary>\n            Gets or sets a value indicating whether visible status of the spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Show"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "TypeUpdate",
+            "TypeName": "System.Boolean",
+            "Documentation": "\n            <summary>\n            Gets or sets a value indicating whether type of the spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "TypeUpdate"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.Internal.Bootstrap",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 198206408,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Spinner.Internal.Bootstrap4",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Represents the Spinner's Bootstrap 4 class.\n            </summary>\n            <exclude />\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Bootstrap4"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.Internal.Bootstrap4"
+        }
+      },
+      {
+        "HashCode": 209160182,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Spinner.Internal.Bootstrap4",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Represents the Spinner's Bootstrap 4 class.\n            </summary>\n            <exclude />\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Syncfusion.Blazor.Spinner.Internal.Bootstrap4"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.Internal.Bootstrap4",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -69168577,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Spinner.Internal.FabricHighContrast",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Represents the Spinner's Fabric and High-Contrast class.\n            </summary>\n            <exclude />\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FabricHighContrast"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.Internal.FabricHighContrast"
+        }
+      },
+      {
+        "HashCode": 1271440252,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Spinner.Internal.FabricHighContrast",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Represents the Spinner's Fabric and High-Contrast class.\n            </summary>\n            <exclude />\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Syncfusion.Blazor.Spinner.Internal.FabricHighContrast"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.Internal.FabricHighContrast",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 513306205,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Spinner.Internal.Material",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Represents the Spinner Material class.\n            </summary>\n            <exclude />\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Material"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Show",
+            "TypeName": "System.Boolean",
+            "Documentation": "\n            <summary>\n            Gets or sets a value indicating whether visible status of the spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Show"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "TypeUpdate",
+            "TypeName": "System.Boolean",
+            "Documentation": "\n            <summary>\n            Gets or sets a value indicating whether type of the spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "TypeUpdate"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.Internal.Material"
+        }
+      },
+      {
+        "HashCode": -1288006637,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Spinner.Internal.Material",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Represents the Spinner Material class.\n            </summary>\n            <exclude />\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Syncfusion.Blazor.Spinner.Internal.Material"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Show",
+            "TypeName": "System.Boolean",
+            "Documentation": "\n            <summary>\n            Gets or sets a value indicating whether visible status of the spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Show"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "TypeUpdate",
+            "TypeName": "System.Boolean",
+            "Documentation": "\n            <summary>\n            Gets or sets a value indicating whether type of the spinner.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "TypeUpdate"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.Internal.Material",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 230225016,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Spinner.Internal.SpinnerBase",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Represents the common methods that are used in all the themes.\n            </summary>\n            <exclude />\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SpinnerBase"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.Internal.SpinnerBase"
+        }
+      },
+      {
+        "HashCode": 549900215,
+        "Kind": "Components.Component",
+        "Name": "Syncfusion.Blazor.Spinner.Internal.SpinnerBase",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "\n            <summary>\n            Represents the common methods that are used in all the themes.\n            </summary>\n            <exclude />\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Syncfusion.Blazor.Spinner.Internal.SpinnerBase"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.Internal.SpinnerBase",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 24978608,
         "Kind": "Components.Component",
         "Name": "ToDo.Client.App",
@@ -4569,6 +5359,72 @@
         }
       },
       {
+        "HashCode": 185391236,
+        "Kind": "Components.Component",
+        "Name": "ToDo.Client.Shared.LoadingScreen",
+        "AssemblyName": "ToDo.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LoadingScreen"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ToDo.Client.Shared.LoadingScreen"
+        }
+      },
+      {
+        "HashCode": -207178624,
+        "Kind": "Components.Component",
+        "Name": "ToDo.Client.Shared.LoadingScreen",
+        "AssemblyName": "ToDo.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ToDo.Client.Shared.LoadingScreen"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ToDo.Client.Shared.LoadingScreen",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -178778126,
+        "Kind": "Components.Component",
+        "Name": "ToDo.Client.Shared.NavMenu",
+        "AssemblyName": "ToDo.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ToDo.Client.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": 20932893,
+        "Kind": "Components.Component",
+        "Name": "ToDo.Client.Shared.NavMenu",
+        "AssemblyName": "ToDo.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ToDo.Client.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ToDo.Client.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -1999154142,
         "Kind": "Components.Component",
         "Name": "ToDo.Client.Shared.MainLayout",
@@ -4661,39 +5517,6 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "ToDo.Client.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -178778126,
-        "Kind": "Components.Component",
-        "Name": "ToDo.Client.Shared.NavMenu",
-        "AssemblyName": "ToDo.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToDo.Client.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": 20932893,
-        "Kind": "Components.Component",
-        "Name": "ToDo.Client.Shared.NavMenu",
-        "AssemblyName": "ToDo.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ToDo.Client.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToDo.Client.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16321,6 +17144,87 @@
           "Components.Bind.ChangeAttribute": "ValueChanged",
           "Components.Bind.ExpressionAttribute": "ValueExpression",
           "Common.TypeName": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1362005757,
+        "Kind": "Components.Bind",
+        "Name": "Syncfusion.Blazor.Spinner.SfSpinner",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "Binds the provided expression to the 'Visible' property and a change event delegate to the 'VisibleChanged' property of the component.",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SfSpinner",
+            "Attributes": [
+              {
+                "Name": "@bind-Visible",
+                "Metadata": {
+                  "Common.DirectiveAttribute": "True"
+                }
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Bind",
+            "Name": "@bind-Visible",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.Boolean>",
+            "Documentation": "Binds the provided expression to the 'Visible' property and a change event delegate to the 'VisibleChanged' property of the component.",
+            "Metadata": {
+              "Common.DirectiveAttribute": "True",
+              "Common.PropertyName": "Visible"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Components.IsSpecialKind": "Components.Bind",
+          "Components.Bind.ValueAttribute": "Visible",
+          "Components.Bind.ChangeAttribute": "VisibleChanged",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.SfSpinner"
+        }
+      },
+      {
+        "HashCode": -1998903093,
+        "Kind": "Components.Bind",
+        "Name": "Syncfusion.Blazor.Spinner.SfSpinner",
+        "AssemblyName": "Syncfusion.Blazor.Spinner",
+        "Documentation": "Binds the provided expression to the 'Visible' property and a change event delegate to the 'VisibleChanged' property of the component.",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Syncfusion.Blazor.Spinner.SfSpinner",
+            "Attributes": [
+              {
+                "Name": "@bind-Visible",
+                "Metadata": {
+                  "Common.DirectiveAttribute": "True"
+                }
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Bind",
+            "Name": "@bind-Visible",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.Boolean>",
+            "Documentation": "Binds the provided expression to the 'Visible' property and a change event delegate to the 'VisibleChanged' property of the component.",
+            "Metadata": {
+              "Common.DirectiveAttribute": "True",
+              "Common.PropertyName": "Visible"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Components.IsSpecialKind": "Components.Bind",
+          "Components.Bind.ValueAttribute": "Visible",
+          "Components.Bind.ChangeAttribute": "VisibleChanged",
+          "Common.TypeName": "Syncfusion.Blazor.Spinner.SfSpinner",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

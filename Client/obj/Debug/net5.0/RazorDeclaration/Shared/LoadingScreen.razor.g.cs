@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace ToDo.Client.Pages
+namespace ToDo.Client.Shared
 {
     #line hidden
     using System;
@@ -89,8 +89,7 @@ using Plk.Blazor.DragDrop;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/index")]
-    public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class LoadingScreen : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)

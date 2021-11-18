@@ -90,12 +90,13 @@ using Plk.Blazor.DragDrop;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Pages\Todo.razor"
+#line 3 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Pages\Todo.razor"
 using ToDo.Shared;
 
 #line default
 #line hidden
 #nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     [Microsoft.AspNetCore.Components.RouteAttribute("/todo")]
     public partial class Todo : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,23 +106,19 @@ using ToDo.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 105 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Pages\Todo.razor"
+#line 115 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Pages\Todo.razor"
        
       
     private string newTodo, newTodoTitle;
-
-    public List<string> Items = new List<string>()
-    {
-        "1", "2", "3", "4", "5", "6"
-    };
-
     private Category[] categories ;
     private Category newCat = new Category();
-
     public List<Category> ToDoList = null;
+    
+    private bool ShowLoading {get; set;}
 
     protected override async Task OnInitializedAsync()
     {
+        ShowLoading = true;
         ToDoList = new List<Category>();
         categories = await Http.GetFromJsonAsync<Category[]>("api/category");
         //await JSRuntime.InvokeVoidAsync("alert", System.Text.Json.JsonSerializer.Serialize(categories)); 
@@ -129,7 +126,10 @@ using ToDo.Shared;
             foreach (var category in categories){
                  ToDoList.Add(category);
             }
+             
         } 
+
+        ShowLoading = false;
 
     }
 

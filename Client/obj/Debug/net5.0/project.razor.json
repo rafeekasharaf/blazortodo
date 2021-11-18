@@ -74,39 +74,6 @@
         }
       },
       {
-        "HashCode": 575441119,
-        "Kind": "Components.Component",
-        "Name": "ToDo.Client.Pages.Index",
-        "AssemblyName": "ToDo.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToDo.Client.Pages.Index"
-        }
-      },
-      {
-        "HashCode": 359665643,
-        "Kind": "Components.Component",
-        "Name": "ToDo.Client.Pages.Index",
-        "AssemblyName": "ToDo.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ToDo.Client.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToDo.Client.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -409743848,
         "Kind": "Components.Component",
         "Name": "ToDo.Client.Pages.FetchData",
@@ -169,6 +136,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "ToDo.Client.Pages.Todo",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 575441119,
+        "Kind": "Components.Component",
+        "Name": "ToDo.Client.Pages.Index",
+        "AssemblyName": "ToDo.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ToDo.Client.Pages.Index"
+        }
+      },
+      {
+        "HashCode": 359665643,
+        "Kind": "Components.Component",
+        "Name": "ToDo.Client.Pages.Index",
+        "AssemblyName": "ToDo.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ToDo.Client.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ToDo.Client.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -318,6 +318,39 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "ToDo.Client.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 185391236,
+        "Kind": "Components.Component",
+        "Name": "ToDo.Client.Shared.LoadingScreen",
+        "AssemblyName": "ToDo.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LoadingScreen"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ToDo.Client.Shared.LoadingScreen"
+        }
+      },
+      {
+        "HashCode": -207178624,
+        "Kind": "Components.Component",
+        "Name": "ToDo.Client.Shared.LoadingScreen",
+        "AssemblyName": "ToDo.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ToDo.Client.Shared.LoadingScreen"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ToDo.Client.Shared.LoadingScreen",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -13498,6 +13531,11 @@
     {
       "FilePath": "d:\\USERS\\RAFEEK\\Work\\Blazor\\ToDo\\Client\\App.razor",
       "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\USERS\\RAFEEK\\Work\\Blazor\\ToDo\\Client\\Shared\\LoadingScreen.razor",
+      "TargetPath": "Shared\\LoadingScreen.razor",
       "FileKind": "component"
     },
     {

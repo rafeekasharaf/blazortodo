@@ -1,3 +1,4 @@
+@page "/"
 @page "/todo"
 @using ToDo.Shared
 @inject HttpClient Http
@@ -18,7 +19,12 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+
+            @if(ShowLoading) {
+                <LoadingScreen></LoadingScreen>
+            }
+            else {
+                 <div class="row">
                 <div class="col-md-12">
                     <div class="container-fluid no-padding">
                         <div class="card-columns">
@@ -96,6 +102,10 @@
                     
                 </div>
             </div>
+            }
+
+            
+           
         </div>
     </div>  
 
@@ -105,19 +115,15 @@
 @code {
       
     private string newTodo, newTodoTitle;
-
-    public List<string> Items = new List<string>()
-    {
-        "1", "2", "3", "4", "5", "6"
-    };
-
     private Category[] categories ;
     private Category newCat = new Category();
-
     public List<Category> ToDoList = null;
+    
+    private bool ShowLoading {get; set;}
 
     protected override async Task OnInitializedAsync()
     {
+        ShowLoading = true;
         ToDoList = new List<Category>();
         categories = await Http.GetFromJsonAsync<Category[]>("api/category");
         //await JSRuntime.InvokeVoidAsync("alert", System.Text.Json.JsonSerializer.Serialize(categories)); 
@@ -125,7 +131,10 @@
             foreach (var category in categories){
                  ToDoList.Add(category);
             }
+             
         } 
+
+        ShowLoading = false;
 
     }
 
