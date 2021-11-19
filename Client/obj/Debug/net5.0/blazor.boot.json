@@ -197,13 +197,13 @@
       "mscorlib.dll": "sha256-+dB3Q0YubUPF1oZDMVZn6ZCiRkzRomtLoq51T5FocJk=",
       "netstandard.dll": "sha256-dOHF0zANIyA4WS496iWrAkTuEFWSWrXJjZj2pQQHrMA=",
       "System.Private.CoreLib.dll": "sha256-C96+zv+mWW0XzMG520oRgAG1lHVY8xzWGc6oc6rFjws=",
-      "ToDo.Shared.dll": "sha256-1b7L9oduf0UImDop0HWq0Nhb2tSZkFnxEgRe88sFRdQ=",
-      "ToDo.Client.dll": "sha256-nRq77I+pkVf9vwloWHnBPcIHUM4kTu0RrHjhuZywA10="
+      "ToDo.Shared.dll": "sha256-vTxfCJFXqEQmOWt3YwBZORrZ+UU6vaCaAh5cO+TTHuA=",
+      "ToDo.Client.dll": "sha256-KZLKTQ1dEpL6+fcgge3x\/k4ovAa3Fos+FI3G+2OwFwM="
     },
     "lazyAssembly": null,
     "pdb": {
-      "ToDo.Shared.pdb": "sha256-NgLTroZbEJOaZDvhUBeOlGOOGBAKi6m\/8njyI2pof2Q=",
-      "ToDo.Client.pdb": "sha256-j57YL9PHzl7rQC7mYNOrFDLv3uL1zt5CdRAH7VJvvu0="
+      "ToDo.Shared.pdb": "sha256-fqX\/RM1wNa9ZO0s\/HlaPG7SSxf5NhGPYpGVezLzacgg=",
+      "ToDo.Client.pdb": "sha256-JzVuoVAM\/7OESisHwa\/hly3t+H\/YXZfFQ\/J97hiIRwc="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-ir9YCVnnk7popgsYUkvitfGA4WpkP1ydPh\/ENHnxGys=",

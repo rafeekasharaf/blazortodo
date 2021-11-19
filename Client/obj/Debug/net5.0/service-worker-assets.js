@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-auh3A2LJIAKUeu88zT\/MD2beExyGQRimlDtm\/dXlFNM=",
+      "hash": "sha256-\/5g6CJR8CndySpR6GbJi2NuXgnG2g0x8BqDhW0zRtVE=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -793,19 +793,19 @@
       "url": "_framework\/dotnet.5.0.12.js"
     },
     {
-      "hash": "sha256-1b7L9oduf0UImDop0HWq0Nhb2tSZkFnxEgRe88sFRdQ=",
+      "hash": "sha256-vTxfCJFXqEQmOWt3YwBZORrZ+UU6vaCaAh5cO+TTHuA=",
       "url": "_framework\/ToDo.Shared.dll"
     },
     {
-      "hash": "sha256-NgLTroZbEJOaZDvhUBeOlGOOGBAKi6m\/8njyI2pof2Q=",
+      "hash": "sha256-fqX\/RM1wNa9ZO0s\/HlaPG7SSxf5NhGPYpGVezLzacgg=",
       "url": "_framework\/ToDo.Shared.pdb"
     },
     {
-      "hash": "sha256-nRq77I+pkVf9vwloWHnBPcIHUM4kTu0RrHjhuZywA10=",
+      "hash": "sha256-KZLKTQ1dEpL6+fcgge3x\/k4ovAa3Fos+FI3G+2OwFwM=",
       "url": "_framework\/ToDo.Client.dll"
     },
     {
-      "hash": "sha256-j57YL9PHzl7rQC7mYNOrFDLv3uL1zt5CdRAH7VJvvu0=",
+      "hash": "sha256-JzVuoVAM\/7OESisHwa\/hly3t+H\/YXZfFQ\/J97hiIRwc=",
       "url": "_framework\/ToDo.Client.pdb"
     },
     {
@@ -1601,11 +1601,11 @@
       "url": "_framework\/dotnet.5.0.12.js.gz"
     },
     {
-      "hash": "sha256-Sj5viCHNMltDwXCu+SW\/tDR3z8lzpdvVHNku+daJ68o=",
+      "hash": "sha256-84gb3XrWZ9iCzYjg+KoUDmGDBSrcloIjewUy2ddLWQw=",
       "url": "_framework\/ToDo.Shared.dll.gz"
     },
     {
-      "hash": "sha256-xFA1PCNaX8NJqVyfrtALfi0LRzU1PO0hu2XX6Uuz2IY=",
+      "hash": "sha256-38dfcIK331Rx4pZ1bOnjbuZkfw9jAUHQgPcq\/wy6iNQ=",
       "url": "css\/app.css"
     },
     {
@@ -1673,13 +1673,13 @@
       "url": "manifest.json"
     },
     {
-      "hash": "sha256-j9+w5fmbJVYiCloBsVRKrwvhwurfnJp6OqOwcHZmF+g=",
+      "hash": "sha256-1ew8brZtgU0pUB+fqc2J62TNb+77E19ORrDUjzgYmaQ=",
       "url": "ToDo.Client.styles.css"
     },
     {
-      "hash": "sha256-ZDopjbtSk13JQRy956xBhkAZ1qSHYke7SuC7NGFlWVc=",
+      "hash": "sha256-Xa92FRdy38NHcS7JpiT2AM4FKpER16AOgMF8DYdB+cg=",
       "url": "ToDo.Client.bundle.scp.css"
     }
   ],
-  "version": "3o4lhiF0"
+  "version": "ICdHph26"
 };

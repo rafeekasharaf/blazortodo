@@ -5174,39 +5174,6 @@
         }
       },
       {
-        "HashCode": -1559460945,
-        "Kind": "Components.Component",
-        "Name": "ToDo.Client.Pages.Counter",
-        "AssemblyName": "ToDo.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToDo.Client.Pages.Counter"
-        }
-      },
-      {
-        "HashCode": -1103661112,
-        "Kind": "Components.Component",
-        "Name": "ToDo.Client.Pages.Counter",
-        "AssemblyName": "ToDo.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ToDo.Client.Pages.Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToDo.Client.Pages.Counter",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -409743848,
         "Kind": "Components.Component",
         "Name": "ToDo.Client.Pages.FetchData",

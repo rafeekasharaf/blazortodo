@@ -48,6 +48,10 @@ a, .btn-link {
     right: 0.75rem;
     top: 0.5rem;
 }
+.btn:disabled {
+    opacity: .65;
+    cursor: not-allowed;
+}
 .section-dots {
     width: 100%;
     height: 100%;
@@ -125,26 +129,17 @@ a, .btn-link {
 
 .list-wrapper .completed {
     text-decoration: line-through;
-    text-decoration-color: #3da5f4
+    text-decoration-color: #28a745;
+
 }
 
-.list-wrapper ul li .form-check {
-    max-width: 90%;
-    margin-top: .25rem;
-    margin-bottom: .25rem
-}
-
-.list-wrapper ul li .form-check,
-.list-wrapper ul li .form-check .form-check-label,
-.email-wrapper .mail-sidebar .menu-bar .profile-list-item a .user .u-name,
-.email-wrapper .mail-sidebar .menu-bar .profile-list-item a .user .u-designation,
-.email-wrapper .mail-list-container .mail-list .content .sender-name,
-.email-wrapper .message-body .attachments-sections ul li .details p.file-name,
-.settings-panel .chat-list .list .info p {
+.list-wrapper ul li .form-check .form-check-label
+ {
     text-overflow: ellipsis;
     overflow: hidden;
     max-width: 100%;
-    white-space: nowrap
+    /*white-space: nowrap;*/
+    
 }
 
 .form-check {
@@ -155,17 +150,15 @@ a, .btn-link {
     padding-left: 0
 }
 
-.list-wrapper ul li .form-check,
-.list-wrapper ul li .form-check .form-check-label,
-.email-wrapper .mail-sidebar .menu-bar .profile-list-item a .user .u-name,
-.email-wrapper .mail-sidebar .menu-bar .profile-list-item a .user .u-designation,
-.email-wrapper .mail-list-container .mail-list .content .sender-name,
-.email-wrapper .message-body .attachments-sections ul li .details p.file-name,
-.settings-panel .chat-list .list .info p {
+
+
+
+.list-wrapper ul li .form-check .form-check-label
+ {
     text-overflow: ellipsis;
     overflow: hidden;
     max-width: 100%;
-    white-space: nowrap
+    /*white-space: nowrap*/
 }
 
 .form-check .form-check-label {
@@ -202,25 +195,14 @@ input[type="checkbox"] {
     padding: 0
 }
 
-.list-wrapper ul li .form-check,
-.list-wrapper ul li .form-check .form-check-label,
-.email-wrapper .mail-sidebar .menu-bar .profile-list-item a .user .u-name,
-.email-wrapper .mail-sidebar .menu-bar .profile-list-item a .user .u-designation,
-.email-wrapper .mail-list-container .mail-list .content .sender-name,
-.email-wrapper .message-body .attachments-sections ul li .details p.file-name,
-.settings-panel .chat-list .list .info p {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 100%;
-    white-space: nowrap
-}
+
 
 .form-check .form-check-label input[type="checkbox"]+.input-helper:before {
     content: "";
     width: 18px;
     height: 18px;
     border-radius: 2px;
-    border: solid #405189;
+    border: solid #28a745;
     border-width: 2px;
     -webkit-transition: all;
     -moz-transition: all;
@@ -267,9 +249,19 @@ input[type="checkbox"] {
     top: 0;
     left: 0
 }
-
-.form-check .form-check-label input[type="checkbox"]:checked+.input-helper:before {
-    background: #405189;
+.list-wrapper .deleted{
+    background: rgb(255,9,9,0.2);
+    padding-right: 5px;
+}
+.todo-add{
+    margin-top: 8px;
+}
+.deleted .form-check .form-check-label input[type="checkbox"]+.input-helper:before {
+    background: rgb(0,0,0,0.3);
+    border-width: 0
+}
+.completed .form-check .form-check-label input[type="checkbox"]+.input-helper:before {
+    background: #28a745;
     border-width: 0
 }
 
@@ -278,7 +270,7 @@ input[type="checkbox"] {
     width: 18px;
     height: 18px;
     border-radius: 2px;
-    border: solid #405189;
+    border: solid #28a745;
     border-width: 2px;
     -webkit-transition: all;
     -moz-transition: all;
@@ -299,10 +291,10 @@ input[type="checkbox"] {
     color: #fff
 }
 
-.text-primary,
-.list-wrapper .completed .remove {
-    color: #405189 !important
-}
+.text-primary
+{
+    color: #28a745 !important
+} 
 
 .list-wrapper .remove {
     cursor: pointer;
@@ -311,7 +303,7 @@ input[type="checkbox"] {
     width: 1.25rem;
     height: 1.25rem;
     line-height: 20px;
-    text-align: center
+    text-align: center;
 }
 
 .ml-auto,
@@ -321,14 +313,8 @@ input[type="checkbox"] {
 }
 
 .mdi-close-circle-outline:before {
-    content: "\F15A"
-}
+    content: "\F15A"}
 
-.list-wrapper ul li {
-    font-size: .9375rem;
-    padding: .4rem 0;
-    border-bottom: 1px solid #f3f3f3
-}
 
 .mdi:before {
     font-family: FontAwesome;
@@ -337,7 +323,7 @@ input[type="checkbox"] {
     padding-right: 3px;
     vertical-align: middle;
     font-size: .756em;
-    color: #405189
+    color: #28a745;
 }
 .flex-column-reverse {
     flex-direction: column-reverse !important
@@ -348,6 +334,8 @@ input[type="checkbox"] {
     list-style: none;
     margin-bottom: 0
 }
+
+
 
 /*   ****  */
 
@@ -428,11 +416,11 @@ input[type="checkbox"] {
 }
 @media (min-width:992px) {
     .card-columns {
-      column-count: 2;
+      column-count: 3;
     }
 }
 @media (min-width:1200px) {
     .card-columns {
-      column-count: 4;
+      column-count: 5;
     }
 }

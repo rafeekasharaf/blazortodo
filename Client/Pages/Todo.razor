@@ -1,6 +1,7 @@
 @page "/"
 @page "/todo"
 @using ToDo.Shared
+@using ToDo.Shared.Utils
 @inject HttpClient Http
 @inject IJSRuntime JSRuntime
 
@@ -15,7 +16,8 @@
                         <input class="form-control form-control-lg add-text" type="text" @bind-value=@newTodoTitle
                             placeholder="Title for ToDo">
 
-                        <button type="button" @onclick="AddTodoTitle" class="btn btn-outline-success btn-lg">Add Title</button>
+                        <button type="button" @onclick="AddTodoTitle" disabled="@(string.IsNullOrWhiteSpace(newTodoTitle))"
+                        class="btn btn-outline-success btn-lg">Add Title</button>
                     </div>
                 </div>
             </div>
@@ -34,11 +36,33 @@
                                     <div class="card-body">
                                         <div class="list-wrapper">
                                             <div class="todo-list">
+                                                @{
+                                                    var todoCategory = @context;
+                                                }
                                                     @if(@context.ToDo != null ){
                                                         <ul>
-                                                        @foreach (var items in @context.ToDo)
+                                                        @foreach (var items in todoCategory.ToDo)
                                                         {   
-                                                                <li>@items.Title</li>
+                                                            <li  class="@items.CompletedCssClass" id="@items.ItemID">
+                                                                <div class="form-check col-md-10 col-lg-10 col-sm-10 col-xs-10" style="margin-left: 15px"> 
+                                                                            <label class="form-check-label"> 
+                                                                                <input class="checkbox" type="checkbox"                                                                             
+                                                                                @onchange="(e) => TodoItemMarkComplete(items,todoCategory, e)"> @items.Title
+                                                                                <i class="input-helper"></i>
+                                                                            </label>                                                                         
+                                                                        </div>
+                                                                        <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1" 
+                                                                            style="padding:0px" @onclick="()=>DeleteToDoItem(items,todoCategory)">
+                                                                                @if(items.Active == 1) {
+                                                                                @* <Tooltip Text="Delete?"> <i class="remove oi oi-delete"></i> </Tooltip> *@
+                                                                                <i class="remove oi oi-delete"></i>
+                                                                                } 
+                                                                                else {
+                                                                                    @* <Tooltip Text="Undo"> <i class="remove oi oi-action-undo"></i> </Tooltip> *@
+                                                                                    <i class="remove oi oi-action-undo"></i>
+                                                                                }                                                                        
+                                                                        </div> 
+                                                            </li>
                                                         }
                                                         </ul>
                                                     }
@@ -51,47 +75,13 @@
                                             <div class="todo-add d-flex">
                                                 <input class="form-control" type="text" @bind-value=@newTodo 
                                                 placeholder="Add items">
-                                                @{
-                                                    var todoCategory = @context;
-                                                }
-                                                <button type="button"                                                 
-                                                    @onclick="() => AddTodoItem(todoCategory)"
+                                                
+                                                <button type="button"  disabled="@(string.IsNullOrWhiteSpace(newTodo))"                                                                                            
+                                                    @onclick="()=> AddTodoItem(todoCategory, false)"
                                                  class="btn btn-outline-success">Add</button>
                                             </div>
 
-                                        @* <ul class="d-flex flex-column-reverse todo-list">
-                                            <li>
-                                            <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"> For what
-                                            reason would it be advisable. <i class="input-helper"></i></label> </div> <i
-                                            class="remove mdi mdi-close-circle-outline"></i>
-                                            </li>
-                                            <li class="completed">
-                                            <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"
-                                            checked=""> For what reason would it be advisable for me to think. <i
-                                            class="input-helper"></i></label> </div> <i class="remove mdi mdi-close-circle-outline"></i>
-                                            </li>
-                                            <li>
-                                            <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"> it be
-                                            advisable for me to think about business content? <i class="input-helper"></i></label> </div> <i
-                                            class="remove mdi mdi-close-circle-outline"></i>
-                                            </li>
-                                            <li>
-                                            <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"> Print
-                                            Statements all <i class="input-helper"></i></label> </div> <i
-                                            class="remove mdi mdi-close-circle-outline"></i>
-                                            </li>
-                                            <li class="completed">
-                                            <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"
-                                            checked=""> Call Rampbo <i class="input-helper"></i></label> </div> <i
-                                            class="remove mdi mdi-close-circle-outline"></i>
-                                            </li>
-                                            <li>
-                                            <div class="form-check"> <label class="form-check-label"> <input class="checkbox" type="checkbox"> Print
-                                            bills <i class="input-helper"></i></label> </div> <i
-                                            class="remove mdi mdi-close-circle-outline"></i>
-                                            </li>
-                                            </ul> *@
-
+                                        
                                         </div>
                                     </div>
                                 </div>
@@ -120,6 +110,8 @@
     public List<Category> ToDoList = null;
     
     private bool ShowLoading {get; set;}
+    
+    
 
     protected override async Task OnInitializedAsync()
     {
@@ -147,6 +139,7 @@
         newCat.Active = 1;
         newCat.Sort = 1;       
         
+        //await JSRuntime.InvokeVoidAsync("alert", System.Text.Json.JsonSerializer.Serialize(TimeUtils.ToUnixTimeSeconds())); 
 
         await Http.PostAsJsonAsync<Category>("api/category", newCat);
         await OnInitializedAsync();
@@ -155,17 +148,56 @@
         
     }
 
-    private async Task AddTodoItem(Category cat) {
+    private bool TodoSelected(TodoItem item) {
+        return (item.Completed == 1 ? true : false);
+    }
+
+    private async Task DeleteToDoItem(TodoItem item, Category cat) {
+        //await JSRuntime.InvokeVoidAsync("alert", System.Text.Json.JsonSerializer.Serialize(item)); 
+        item.Active = item.Active == 1 ? 0 : 1;
+        if (item.Active == 0) {
+            item.CompletedCssClass = item.CompletedCssClass + " deleted";
+        } else {
+            if(item.CompletedCssClass.Contains("deleted")){
+                item.CompletedCssClass = item.CompletedCssClass.Replace(" deleted", "");
+            }            
+        }
+
+        await AddTodoItem(cat, true);
+    }
+
+    private async Task TodoItemMarkComplete(TodoItem item, Category cat, ChangeEventArgs e) {        
+        item.Completed = ((bool)e.Value)  ? 1: 0;
+        item.CompletedCssClass = item.Completed == 1 ? "row completed" : "row";
+        
+
+        await AddTodoItem(cat, true);
+    }
+
+    private async Task AddTodoItem(Category cat, bool isUpdate) {
         newCat = new Category();
         newCat = cat;
         
         List<TodoItem> mydoList = new List<TodoItem>();
-        mydoList.Add(new TodoItem(){Title=newTodo, Active=1, Sort=1});
+
+        if (!isUpdate) {
+            mydoList.Add(new TodoItem(){ItemID=TimeUtils.ToUnixTimeSeconds(), Title=newTodo, Active=1, Sort=1, Completed=0, CompletedCssClass="row"});
+        }    
+
+        newTodo = "";    
+
+        //await JSRuntime.InvokeVoidAsync("alert", System.Text.Json.JsonSerializer.Serialize(mydoList)); 
 
         if (newCat.ToDo != null) {
             foreach (var items in cat.ToDo)
             {   
-                mydoList.Add(new TodoItem(){Title=items.Title, Active=items.Active, Sort=items.Sort});
+                mydoList.Add(new TodoItem(){
+                    Title=items.Title,                     
+                    Active=items.Active, 
+                    Sort=items.Sort, 
+                    ItemID= items.ItemID, 
+                    Completed= items.Completed, 
+                    CompletedCssClass=items.CompletedCssClass });
             } 
         }
         
@@ -173,7 +205,7 @@
         await Http.PutAsJsonAsync<Category>("api/category/"+newCat.CategoryID, newCat);
 
         await OnInitializedAsync();
-        newTodo = "";
+        
     }
     public void OnItemDrop()
     {

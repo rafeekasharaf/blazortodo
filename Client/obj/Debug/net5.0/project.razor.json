@@ -41,39 +41,6 @@
         }
       },
       {
-        "HashCode": -1559460945,
-        "Kind": "Components.Component",
-        "Name": "ToDo.Client.Pages.Counter",
-        "AssemblyName": "ToDo.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToDo.Client.Pages.Counter"
-        }
-      },
-      {
-        "HashCode": -1103661112,
-        "Kind": "Components.Component",
-        "Name": "ToDo.Client.Pages.Counter",
-        "AssemblyName": "ToDo.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ToDo.Client.Pages.Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToDo.Client.Pages.Counter",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -409743848,
         "Kind": "Components.Component",
         "Name": "ToDo.Client.Pages.FetchData",
@@ -136,39 +103,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "ToDo.Client.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1316197842,
-        "Kind": "Components.Component",
-        "Name": "ToDo.Client.Pages.Todo",
-        "AssemblyName": "ToDo.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Todo"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToDo.Client.Pages.Todo"
-        }
-      },
-      {
-        "HashCode": 662375045,
-        "Kind": "Components.Component",
-        "Name": "ToDo.Client.Pages.Todo",
-        "AssemblyName": "ToDo.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ToDo.Client.Pages.Todo"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToDo.Client.Pages.Todo",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -13497,57 +13431,6 @@
     "CSharpLanguageVersion": 900
   },
   "RootNamespace": "ToDo.Client",
-  "Documents": [
-    {
-      "FilePath": "d:\\USERS\\RAFEEK\\Work\\Blazor\\ToDo\\Client\\Pages\\Counter.razor",
-      "TargetPath": "Pages\\Counter.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\USERS\\RAFEEK\\Work\\Blazor\\ToDo\\Client\\_Imports.razor",
-      "TargetPath": "_Imports.razor",
-      "FileKind": "componentImport"
-    },
-    {
-      "FilePath": "d:\\USERS\\RAFEEK\\Work\\Blazor\\ToDo\\Client\\Pages\\FetchData.razor",
-      "TargetPath": "Pages\\FetchData.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\USERS\\RAFEEK\\Work\\Blazor\\ToDo\\Client\\Shared\\NavMenu.razor",
-      "TargetPath": "Shared\\NavMenu.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\USERS\\RAFEEK\\Work\\Blazor\\ToDo\\Client\\Pages\\Todo.razor",
-      "TargetPath": "Pages\\Todo.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\USERS\\RAFEEK\\Work\\Blazor\\ToDo\\Client\\Pages\\Index.razor",
-      "TargetPath": "Pages\\Index.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\USERS\\RAFEEK\\Work\\Blazor\\ToDo\\Client\\App.razor",
-      "TargetPath": "App.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\USERS\\RAFEEK\\Work\\Blazor\\ToDo\\Client\\Shared\\LoadingScreen.razor",
-      "TargetPath": "Shared\\LoadingScreen.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\USERS\\RAFEEK\\Work\\Blazor\\ToDo\\Client\\Shared\\SurveyPrompt.razor",
-      "TargetPath": "Shared\\SurveyPrompt.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\USERS\\RAFEEK\\Work\\Blazor\\ToDo\\Client\\Shared\\MainLayout.razor",
-      "TargetPath": "Shared\\MainLayout.razor",
-      "FileKind": "component"
-    }
-  ],
+  "Documents": [],
   "SerializationFormat": "0.2"
 }
