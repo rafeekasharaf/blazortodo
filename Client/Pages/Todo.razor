@@ -44,12 +44,14 @@
                                                         @foreach (var items in todoCategory.ToDo)
                                                         {   
                                                             <li  class="@items.CompletedCssClass" id="@items.ItemID">
-                                                                <div class="form-check col-md-10 col-lg-10 col-sm-10 col-xs-10" style="margin-left: 15px"> 
+                                                                    <div class="form-check col-md-10 col-lg-10 col-sm-10 col-xs-10" style="margin-left: 15px"> 
                                                                             <label class="form-check-label"> 
                                                                                 <input class="checkbox" type="checkbox"                                                                             
                                                                                 @onchange="(e) => TodoItemMarkComplete(items,todoCategory, e)"> @items.Title
                                                                                 <i class="input-helper"></i>
-                                                                            </label>                                                                         
+                                                                            </label>  
+                                                                            
+                                                                            <small class="status-bottom float-right">@GetTodoItemStatus(items)</small>                                                                       
                                                                         </div>
                                                                         <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1" 
                                                                             style="padding:0px" @onclick="()=>DeleteToDoItem(items,todoCategory)">
@@ -146,6 +148,18 @@
 
         newTodoTitle = "";
         
+    }
+
+    private string GetTodoItemStatus(TodoItem item) {
+        string itemStatus = "";
+
+        if (item.Completed == 1) {
+            itemStatus = "Completed";
+        } else if (item.Active == 0){
+            itemStatus = "Removed";
+        }
+
+        return itemStatus;
     }
 
     private bool TodoSelected(TodoItem item) {

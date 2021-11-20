@@ -127,10 +127,13 @@ a, .btn-link {
     text-align: center
 }
 
-.list-wrapper .completed {
+.list-wrapper .completed .form-check-label {
     text-decoration: line-through;
     text-decoration-color: #28a745;
+}
 
+.list-wrapper .completed .status-bottom{
+    color: #28a745;
 }
 
 .list-wrapper ul li .form-check .form-check-label
@@ -249,9 +252,13 @@ input[type="checkbox"] {
     top: 0;
     left: 0
 }
-.list-wrapper .deleted{
-    background: rgb(255,9,9,0.2);
-    padding-right: 5px;
+.list-wrapper .deleted .form-check-label {
+    /*background: rgb(255,9,9,0.2);*/
+    background: rgba(0, 0, 1, 0.1);
+    padding: 5px;
+}
+.list-wrapper .deleted .status-bottom {
+    color: #CD5C5C;
 }
 .todo-add{
     margin-top: 8px;

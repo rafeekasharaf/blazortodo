@@ -113,7 +113,7 @@ using ToDo.Shared.Utils;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 105 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Pages\Todo.razor"
+#line 107 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Pages\Todo.razor"
        
       
     private string newTodo, newTodoTitle;
@@ -158,6 +158,18 @@ using ToDo.Shared.Utils;
 
         newTodoTitle = "";
         
+    }
+
+    private string GetTodoItemStatus(TodoItem item) {
+        string itemStatus = "";
+
+        if (item.Completed == 1) {
+            itemStatus = "Completed";
+        } else if (item.Active == 0){
+            itemStatus = "Removed";
+        }
+
+        return itemStatus;
     }
 
     private bool TodoSelected(TodoItem item) {
