@@ -1653,15 +1653,23 @@
       "url": "css\/open-iconic\/README.md"
     },
     {
-      "hash": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=",
+      "hash": "sha256-cj7F3EblduFRuMEI5yDlz2g+1nmhU516WN1zLGw3sSk=",
       "url": "favicon.ico"
     },
     {
-      "hash": "sha256-IpHFcQvs03lh6W54zoeJRG1jW+VnGmwymzxLoXtKX7Y=",
-      "url": "icon-512.png"
+      "hash": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=",
+      "url": "favicon1.ico"
     },
     {
-      "hash": "sha256-BGZWZkMvQsQ2ZUmhXrvR2OB5pfehq\/rh+WfmxqHu8mA=",
+      "hash": "sha256-IpHFcQvs03lh6W54zoeJRG1jW+VnGmwymzxLoXtKX7Y=",
+      "url": "icon-512_1.png"
+    },
+    {
+      "hash": "sha256-jNRmpVSB\/nWX5Tn4wwPcif31EnGrOEEC5ofpu1HHGI8=",
+      "url": "icon-513.png"
+    },
+    {
+      "hash": "sha256-83gnSSjN77puesA46FNCSI8Swv2UK74JLngCgG4zeg0=",
       "url": "index.html"
     },
     {
@@ -1669,7 +1677,7 @@
       "url": "js\/site.js"
     },
     {
-      "hash": "sha256-D8J5wOgtR+dvDxOth9V5jNOdV4rHYBvjgv6xjeEClQw=",
+      "hash": "sha256-am13qLfhkv1+\/NMVe9p+sI5rMPcHxJBU+t5wW\/B\/YcA=",
       "url": "manifest.json"
     },
     {
@@ -1681,5 +1689,5 @@
       "url": "ToDo.Client.bundle.scp.css"
     }
   ],
-  "version": "LXIFB\/xy"
+  "version": "yfwgNOpN"
 };
