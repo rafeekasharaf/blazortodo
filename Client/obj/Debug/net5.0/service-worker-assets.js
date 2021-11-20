@@ -1605,7 +1605,7 @@
       "url": "_framework\/ToDo.Shared.dll.gz"
     },
     {
-      "hash": "sha256-38dfcIK331Rx4pZ1bOnjbuZkfw9jAUHQgPcq\/wy6iNQ=",
+      "hash": "sha256-eXZbQPIKa2IHLsgpAzxIGmRlyH2CvtPSUssN4PuAlIk=",
       "url": "css\/app.css"
     },
     {
@@ -1681,5 +1681,5 @@
       "url": "ToDo.Client.bundle.scp.css"
     }
   ],
-  "version": "ICdHph26"
+  "version": "LXIFB\/xy"
 };
