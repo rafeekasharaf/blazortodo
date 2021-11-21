@@ -11,7 +11,7 @@
     <div class="container-fluid " id="page-content">
         <div class="padding">
             <div class="row  d-flex justify-content-start add-title-container">
-                <div class="col-md-6">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <div class="d-flex">
                         <input class="form-control form-control-lg add-text" type="text" @bind-value=@newTodoTitle
                             placeholder="Title for ToDo">
@@ -31,25 +31,64 @@
                     <div class="container-fluid no-padding">
                         <div class="card-columns">
                             <Dropzone Items="ToDoList" InstantReplace="true" TItem="Category">
-                                <div class="card">
-                                    <div class="card-header"> @context.Title</div>
+                                @{
+                                    var todoCategory = @context;
+                                    
+                                }
+                                <div class="card text-white bg-dark">
+                                    @if(ShowEditBox && todoCategory.CategoryID == currentCatID){
+                                        <div class="card-header d-flex justify-content-between align-items-center">
+                                            <input class="form-control add-text" type="text" @bind-value=@updateTodoTitle>
+                                            <h6>
+                                                <i class="title-action-icon oi oi-check" data-toggle="tooltip" data-placement="bottom" 
+                                                title="Update"  @onclick="@(()=>UpdateTodoTitle(todoCategory))"></i>
+                                                <i class="title-action-icon oi oi-circle-x" data-toggle="tooltip" data-placement="bottom" title="Close"
+                                                @onclick="@(()=>ToggleTitleEdit(todoCategory, todoCategory.CategoryID, false))"></i>
+                                            </h6>
+                                        </div>
+                                    }
+                                    else{                                        
+
+                                        <div class="card-header  d-flex justify-content-between align-items-center">
+                                            @context.Title
+                                            <h6>
+                                                <button type="button" class="btn btn-outline-light "
+                                                @onclick="@(()=>ToggleTitleEdit(todoCategory, todoCategory.CategoryID, true))">
+                                                    <i class="oi oi-pencil" data-toggle="tooltip" data-placement="bottom" title="Edit"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-outline-danger "
+                                            @onclick="@(()=>DeleteTodoSection(todoCategory.CategoryID))">
+                                                    <i class="oi oi-trash" data-toggle="tooltip" data-placement="bottom" title="Delete"></i>
+                                                </button>
+                                            </h6>
+                                        </div>
+                                    }
+                                    
+
                                     <div class="card-body">
                                         <div class="list-wrapper">
                                             <div class="todo-list">
-                                                @{
-                                                    var todoCategory = @context;
-                                                }
+                                                
                                                     @if(@context.ToDo != null ){
                                                         <ul>
                                                         @foreach (var items in todoCategory.ToDo)
                                                         {   
                                                             <li  class="@items.CompletedCssClass" id="@items.ItemID">
                                                                     <div class="form-check col-md-10 col-lg-10 col-sm-10 col-xs-10" style="margin-left: 15px"> 
+                                                                           
                                                                             <label class="form-check-label"> 
-                                                                                <input class="checkbox" type="checkbox"                                                                             
-                                                                                @onchange="(e) => TodoItemMarkComplete(items,todoCategory, e)"> @items.Title
+                                                                                @if(items.Active == 1){
+                                                                                  <input class="checkbox" type="checkbox" @onchange="(e) => TodoItemMarkComplete(items,todoCategory, e)">
+                                                                                }
+                                                                                else {
+
+                                                                                    <input class="checkbox disabled" type="checkbox">
+                                                                                }                                                                                  
+                                                                                                                                                      
+                                                                                @items.Title
                                                                                 <i class="input-helper"></i>
-                                                                            </label>  
+                                                                            </label> 
+                                                                            
                                                                             
                                                                             <small class="status-bottom float-right">@GetTodoItemStatus(items)</small>                                                                       
                                                                         </div>
@@ -106,13 +145,13 @@
 
 @code {
       
-    private string newTodo, newTodoTitle;
+    private string newTodo, newTodoTitle, updateTodoTitle, currentCatID;
     private Category[] categories ;
     private Category newCat = new Category();
     public List<Category> ToDoList = null;
     
-    private bool ShowLoading {get; set;}
-    
+    private bool ShowLoading { get; set; }
+    private bool ShowEditBox { get; set; }= false;
     
 
     protected override async Task OnInitializedAsync()
@@ -123,6 +162,9 @@
         //await JSRuntime.InvokeVoidAsync("alert", System.Text.Json.JsonSerializer.Serialize(categories)); 
         if (categories != null ) {
             foreach (var category in categories){
+                if (category.ToDo != null){
+                    category.ToDo = category.ToDo.OrderBy(items => items.Completed).OrderByDescending(items=>items.Active).ToList();
+                }
                  ToDoList.Add(category);
             }
              
@@ -132,21 +174,55 @@
 
     }
 
+    private void ToggleTitleEdit(Category cat, string catID, bool isShow) {
+        if(cat.CategoryID == catID && isShow) {
+            currentCatID = catID;
+            updateTodoTitle = cat.Title;
+            ShowEditBox = true;
+        } 
+        else {
+            ShowEditBox = false;
+            currentCatID = null;
+            updateTodoTitle = "";
+        }
+        
+        StateHasChanged();
+    }
+
+    private async Task UpdateTodoTitle(Category cat) {
+        cat.Title = updateTodoTitle;
+        updateTodoTitle = "";
+        ShowEditBox=false;
+
+        await Http.PutAsJsonAsync<Category>("api/category/"+cat.CategoryID, cat);
+        await OnInitializedAsync();
+    }
+
+    private async Task DeleteTodoSection(string categoryID) {
+        var confirm = await JSRuntime.InvokeAsync<bool>("deleteConfirmation", "Delete?", "Are you sure you want to delete this?", "question");
+        if (confirm) {
+            await Http.DeleteAsync("api/category/"+categoryID);
+            await OnInitializedAsync();
+            StateHasChanged();
+        }
+        
+    }
+
     private async Task AddTodoTitle()
     {
       
-        newCat = new  Category();
-
-        newCat.Title = newTodoTitle;
-        newCat.Active = 1;
-        newCat.Sort = 1;       
-        
+        newCat = new  Category {
+            Title= newTodoTitle,
+            Active= 1,
+            Sort= 1,
+        };
+         newTodoTitle = "";
         //await JSRuntime.InvokeVoidAsync("alert", System.Text.Json.JsonSerializer.Serialize(TimeUtils.ToUnixTimeSeconds())); 
 
         await Http.PostAsJsonAsync<Category>("api/category", newCat);
         await OnInitializedAsync();
-
-        newTodoTitle = "";
+        StateHasChanged();
+       
         
     }
 
@@ -231,34 +307,5 @@
        // replacedItem = item;
         StateHasChanged();
     }
-
-   /* public List<TodoItem> ToDoList = new List<TodoItem>() {
-       new TodoItem(){Title = "Style this list"},
-        new TodoItem(){Title = "Fix a bug"},
-        new TodoItem(){Title = "Build a feature"},
-        new TodoItem(){Title = "Create a PR"}
-    }; */
-
-  /*  public List<TodoItem> MyToDoList = new List<TodoItem>()
-    {
-            new TodoItem(){
-                Title = "Drag this item", 
-                TaskList=[
-                    
-                ]            
-            },
-            new TodoItem(){
-                Title = "Add another item",
-                TaskList = []
-            },
-            new TodoItem(){
-                Title = "Remove this item",
-                TaskList = []
-            }
-                
-          //  new TodoItem(){Title = "Style this list"},
-           // new TodoItem(){Title = "Fix a bug"},
-           // new TodoItem(){Title = "Build a feature"},
-           // new TodoItem(){Title = "Create a PR"},
-    }; */
+ 
 }

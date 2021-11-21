@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-5DsV9n4V6dbY5xmP2cGY6ICrpqZzaNVcbZGP3KHZj6Q=",
+      "hash": "sha256-eC\/HbKR5soWA9bWVT3+\/rElvkt+Gws4pjtNu7XfILwY=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -801,11 +801,11 @@
       "url": "_framework\/ToDo.Shared.pdb"
     },
     {
-      "hash": "sha256-Y7mq3i1M57\/1KbTrjPUW\/byG9sqvTWtDOYlOFgvCJLQ=",
+      "hash": "sha256-NUCrintTqJOTwrDmnsbp46vaa2wltNE4khqPAK28Nmw=",
       "url": "_framework\/ToDo.Client.dll"
     },
     {
-      "hash": "sha256-aOhCAD8d6QLasyTpKxcU7dpy0+DdRftVnXZvrjWST6k=",
+      "hash": "sha256-jRAtvxnl9AjCeMbRXEewA6hF6vyrjE3hWFfOypFBU9I=",
       "url": "_framework\/ToDo.Client.pdb"
     },
     {
@@ -1605,7 +1605,7 @@
       "url": "_framework\/ToDo.Shared.dll.gz"
     },
     {
-      "hash": "sha256-DBzag3jwz0IQc5aUxbVe14qff7L6Q7SodRN3NJvH8qQ=",
+      "hash": "sha256-C7HDK9pQt9\/f7iaSYR3ZPx8k0mbITPNEqCgyaSJLiqE=",
       "url": "css\/app.css"
     },
     {
@@ -1669,11 +1669,11 @@
       "url": "icon-513.png"
     },
     {
-      "hash": "sha256-83gnSSjN77puesA46FNCSI8Swv2UK74JLngCgG4zeg0=",
+      "hash": "sha256-1wre7NDmQgknHabiThpOdjh\/z41iMoAZsxifnLTDnOo=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-I5GFpXds6j2bLK4Dq2aXQLCMsaH0TK4yXVdKlzmxGHs=",
+      "hash": "sha256-PhQh3p44hPIe4pMQhmbQh67nzfYVOGlT28ZpdIGzJ4k=",
       "url": "js\/site.js"
     },
     {
@@ -1689,5 +1689,5 @@
       "url": "ToDo.Client.bundle.scp.css"
     }
   ],
-  "version": "qIWlwJQ0"
+  "version": "C0XXTJ+j"
 };

@@ -113,16 +113,16 @@ using ToDo.Shared.Utils;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 107 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Pages\Todo.razor"
+#line 146 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Pages\Todo.razor"
        
       
-    private string newTodo, newTodoTitle;
+    private string newTodo, newTodoTitle, updateTodoTitle, currentCatID;
     private Category[] categories ;
     private Category newCat = new Category();
     public List<Category> ToDoList = null;
     
-    private bool ShowLoading {get; set;}
-    
+    private bool ShowLoading { get; set; }
+    private bool ShowEditBox { get; set; }= false;
     
 
     protected override async Task OnInitializedAsync()
@@ -133,6 +133,9 @@ using ToDo.Shared.Utils;
         //await JSRuntime.InvokeVoidAsync("alert", System.Text.Json.JsonSerializer.Serialize(categories)); 
         if (categories != null ) {
             foreach (var category in categories){
+                if (category.ToDo != null){
+                    category.ToDo = category.ToDo.OrderBy(items => items.Completed).OrderByDescending(items=>items.Active).ToList();
+                }
                  ToDoList.Add(category);
             }
              
@@ -142,21 +145,55 @@ using ToDo.Shared.Utils;
 
     }
 
+    private void ToggleTitleEdit(Category cat, string catID, bool isShow) {
+        if(cat.CategoryID == catID && isShow) {
+            currentCatID = catID;
+            updateTodoTitle = cat.Title;
+            ShowEditBox = true;
+        } 
+        else {
+            ShowEditBox = false;
+            currentCatID = null;
+            updateTodoTitle = "";
+        }
+        
+        StateHasChanged();
+    }
+
+    private async Task UpdateTodoTitle(Category cat) {
+        cat.Title = updateTodoTitle;
+        updateTodoTitle = "";
+        ShowEditBox=false;
+
+        await Http.PutAsJsonAsync<Category>("api/category/"+cat.CategoryID, cat);
+        await OnInitializedAsync();
+    }
+
+    private async Task DeleteTodoSection(string categoryID) {
+        var confirm = await JSRuntime.InvokeAsync<bool>("deleteConfirmation", "Delete?", "Are you sure you want to delete this?", "question");
+        if (confirm) {
+            await Http.DeleteAsync("api/category/"+categoryID);
+            await OnInitializedAsync();
+            StateHasChanged();
+        }
+        
+    }
+
     private async Task AddTodoTitle()
     {
       
-        newCat = new  Category();
-
-        newCat.Title = newTodoTitle;
-        newCat.Active = 1;
-        newCat.Sort = 1;       
-        
+        newCat = new  Category {
+            Title= newTodoTitle,
+            Active= 1,
+            Sort= 1,
+        };
+         newTodoTitle = "";
         //await JSRuntime.InvokeVoidAsync("alert", System.Text.Json.JsonSerializer.Serialize(TimeUtils.ToUnixTimeSeconds())); 
 
         await Http.PostAsJsonAsync<Category>("api/category", newCat);
         await OnInitializedAsync();
-
-        newTodoTitle = "";
+        StateHasChanged();
+       
         
     }
 
@@ -241,36 +278,7 @@ using ToDo.Shared.Utils;
        // replacedItem = item;
         StateHasChanged();
     }
-
-   /* public List<TodoItem> ToDoList = new List<TodoItem>() {
-       new TodoItem(){Title = "Style this list"},
-        new TodoItem(){Title = "Fix a bug"},
-        new TodoItem(){Title = "Build a feature"},
-        new TodoItem(){Title = "Create a PR"}
-    }; */
-
-  /*  public List<TodoItem> MyToDoList = new List<TodoItem>()
-    {
-            new TodoItem(){
-                Title = "Drag this item", 
-                TaskList=[
-                    
-                ]            
-            },
-            new TodoItem(){
-                Title = "Add another item",
-                TaskList = []
-            },
-            new TodoItem(){
-                Title = "Remove this item",
-                TaskList = []
-            }
-                
-          //  new TodoItem(){Title = "Style this list"},
-           // new TodoItem(){Title = "Fix a bug"},
-           // new TodoItem(){Title = "Build a feature"},
-           // new TodoItem(){Title = "Create a PR"},
-    }; */
+ 
 
 #line default
 #line hidden

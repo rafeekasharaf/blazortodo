@@ -46,14 +46,10 @@ namespace Server.Controllers
           
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
          public Category DeleteCategory(string id){
            return  _catService.DeleteCategory(id);
         }
-
-
-
-
 
     }
 }

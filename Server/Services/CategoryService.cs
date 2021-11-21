@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
 using System.Collections.Generic;
+
 using ToDo.Shared;
 
 namespace ToDo.Server.Services
@@ -17,9 +18,15 @@ namespace ToDo.Server.Services
             _category = database.GetCollection<Category>("Category");
         }
 
-        public List<Category> GetCategories() => _category.Find(category => true).ToList();
+       public List<Category> GetCategories() => _category.Find(category => true).ToList();//.OrderBy(category => category.Active).ThenByAscending(category=>category.Completed).ToList();
         public Category GetCategory(string id) => _category.Find(category => category.CategoryID == id).FirstOrDefault();
 
+       /*  public List<Category> GetCategories() {
+             List<Category> cats = _category.Find(category => true);
+
+             return cats.OrderBy(category => category.Active).OrderBy(category=>category.Completed).ToList();
+         }*/
+        
         public Category PostCategory(Category cat) {
             _category.InsertOne(cat);
 
