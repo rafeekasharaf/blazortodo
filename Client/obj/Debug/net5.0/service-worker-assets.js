@@ -1669,7 +1669,7 @@
       "url": "icon-513.png"
     },
     {
-      "hash": "sha256-1wre7NDmQgknHabiThpOdjh\/z41iMoAZsxifnLTDnOo=",
+      "hash": "sha256-2ls8z+3PvKMosgZexV6+Zu8k3SOe0txCp6VLnpU45FM=",
       "url": "index.html"
     },
     {
@@ -1689,5 +1689,5 @@
       "url": "ToDo.Client.bundle.scp.css"
     }
   ],
-  "version": "C0XXTJ+j"
+  "version": "pcj6RAgK"
 };
