@@ -60,27 +60,41 @@ using Microsoft.AspNetCore.Components.WebAssembly.Http;
 #nullable disable
 #nullable restore
 #line 8 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
-using Microsoft.JSInterop;
+using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 9 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
-using ToDo.Client;
+using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 10 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
-using ToDo.Client.Shared;
+using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 11 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+using ToDo.Client;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+using ToDo.Client.Shared;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
 using Plk.Blazor.DragDrop;
 
 #line default

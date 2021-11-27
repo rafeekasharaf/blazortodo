@@ -81,3 +81,5 @@ D:\USERS\RAFEEK\Work\Blazor\ToDo\Server\bin\Debug\net5.0\Syncfusion.Blazor.Core.
 D:\USERS\RAFEEK\Work\Blazor\ToDo\Server\bin\Debug\net5.0\Syncfusion.Blazor.Spinner.dll
 D:\USERS\RAFEEK\Work\Blazor\ToDo\Server\bin\Debug\net5.0\Syncfusion.Blazor.Themes.dll
 D:\USERS\RAFEEK\Work\Blazor\ToDo\Server\bin\Debug\net5.0\Syncfusion.Licensing.dll
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.Google.dll
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll

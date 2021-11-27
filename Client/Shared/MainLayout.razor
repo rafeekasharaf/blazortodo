@@ -1,4 +1,7 @@
 @inherits LayoutComponentBase
+@using Microsoft.AspNetCore.Components.Authorization
+@inject NavigationManager _navigationManager
+@inject HttpClient _httpClient
 
 <div class="page">
     <div class="sidebar">
@@ -6,9 +9,34 @@
     </div>
 
     <div class="main">
+        <AuthorizeView>
+            <Authorized>
+                <div class="top-row col-md-12 col-sm-12 d-flex justify-content-start">
+                    <div class="col-md-10 col-sm-9 p-0">
+                        <h5 class=" text-truncate text-right"><b>Hello, @context.User.Identity.Name</b></h5>
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                        <button class="btn btn-outline-danger" @onclick="LogoutUser">Logout</button>
+                    </div>
+                    
+                    
+                </div>
+            </Authorized>
+            
+        </AuthorizeView>
+       
        
         <div class="content ">
             @Body
         </div>
     </div>
 </div>
+@code{
+
+    private async Task LogoutUser()
+    {
+        await _httpClient.GetAsync("auth/logoutuser");
+        _navigationManager.NavigateTo("/", true);
+    }
+   
+}

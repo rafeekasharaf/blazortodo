@@ -2,6 +2,7 @@
   <ContentRoot BasePath="/" Path="D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\bin\Debug\net5.0\wwwroot\" />
   <ContentRoot BasePath="/" Path="D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\obj\Debug\net5.0\scopedcss\bundle\" />
   <ContentRoot BasePath="/" Path="D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\wwwroot\" />
+  <ContentRoot BasePath="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication" Path="C:\Users\T0347\.nuget\packages\microsoft.aspnetcore.components.webassembly.authentication\5.0.0\build\..\staticwebassets\" />
   <ContentRoot BasePath="_content/Syncfusion.Blazor.Core" Path="C:\Users\T0347\.nuget\packages\syncfusion.blazor.core\19.3.0.54\build\..\staticwebassets\" />
   <ContentRoot BasePath="_content/Syncfusion.Blazor.Spinner" Path="C:\Users\T0347\.nuget\packages\syncfusion.blazor.spinner\19.3.0.54\build\..\staticwebassets\" />
   <ContentRoot BasePath="_content/Syncfusion.Blazor.Themes" Path="C:\Users\T0347\.nuget\packages\syncfusion.blazor.themes\19.3.0.54\build\..\staticwebassets\" />

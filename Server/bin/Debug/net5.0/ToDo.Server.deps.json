@@ -33,6 +33,8 @@
     ".NETCoreApp,Version=v5.0": {
       "ToDo.Server/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Google": "5.0.0",
+          "Microsoft.AspNetCore.Components.Authorization": "5.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "5.0.12",
           "MongoDB.Driver": "2.13.2",
           "Swashbuckle.AspNetCore": "6.2.3",
@@ -46,7 +48,7 @@
           "Microsoft.AspNetCore.Authentication": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.OAuth": "5.0.0.0",
           "Microsoft.AspNetCore.Authorization.Policy": "5.0.0.0",
-          "Microsoft.AspNetCore.Components.Authorization": "5.0.0.0",
+          "Microsoft.AspNetCore.Components.Authorization.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Components.Server": "5.0.0.0",
           "Microsoft.AspNetCore.Connections.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.CookiePolicy": "5.0.0.0",
@@ -349,6 +351,17 @@
           "lib/netstandard2.1/DnsClient.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication.Google/5.0.0": {
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.52605"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/5.0.12": {
         "dependencies": {
           "Microsoft.AspNetCore.Metadata": "5.0.12",
@@ -381,6 +394,12 @@
         }
       },
       "Microsoft.AspNetCore.Components.Analyzers/5.0.12": {},
+      "Microsoft.AspNetCore.Components.Authorization/5.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "5.0.12",
+          "Microsoft.AspNetCore.Components": "5.0.12"
+        }
+      },
       "Microsoft.AspNetCore.Components.Forms/5.0.12": {
         "dependencies": {
           "Microsoft.AspNetCore.Components": "5.0.12"
@@ -429,6 +448,21 @@
         },
         "compile": {
           "lib/net5.0/Microsoft.AspNetCore.Components.WebAssembly.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.WebAssembly.Authentication/5.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Authorization": "5.0.0",
+          "Microsoft.AspNetCore.Components.Web": "5.0.12"
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.52605"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll": {}
         }
       },
       "Microsoft.AspNetCore.Components.WebAssembly.Server/5.0.12": {
@@ -810,7 +844,9 @@
       },
       "ToDo.Client/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Components.Authorization": "5.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "5.0.12",
+          "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "5.0.0",
           "System.Net.Http.Json": "5.0.0",
           "ToDo.Shared": "1.0.0",
           "blazor-dragdrop": "2.3.0"
@@ -875,7 +911,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Components.Authorization/5.0.0.0": {
+      "Microsoft.AspNetCore.Components.Authorization.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Components.Authorization.dll": {}
         },
@@ -2505,6 +2541,13 @@
       "path": "dnsclient/1.4.0",
       "hashPath": "dnsclient.1.4.0.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Authentication.Google/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1fz/ju0RQV5OsA0kGEMwMnRHkQXwW3tel7t7wayZi7Fc7/zPO820PyW+W+AmJ/lfT9zzTYoaLOUqDB/WAM/Eqw==",
+      "path": "microsoft.aspnetcore.authentication.google/5.0.0",
+      "hashPath": "microsoft.aspnetcore.authentication.google.5.0.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Authorization/5.0.12": {
       "type": "package",
       "serviceable": true,
@@ -2526,6 +2569,13 @@
       "path": "microsoft.aspnetcore.components.analyzers/5.0.12",
       "hashPath": "microsoft.aspnetcore.components.analyzers.5.0.12.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Components.Authorization/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I++r4RdziNB9HeQbkHQvzg2N0rX4dSmA1105OnR5xMKZKL8E7TOKR+Mwf45uXgKvxYb08otPrZWTx1M5rmL/8g==",
+      "path": "microsoft.aspnetcore.components.authorization/5.0.0",
+      "hashPath": "microsoft.aspnetcore.components.authorization.5.0.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Components.Forms/5.0.12": {
       "type": "package",
       "serviceable": true,
@@ -2546,6 +2596,13 @@
       "sha512": "sha512-Aj6niy+SvHSO1xSOLlzfZ+LYyBB0Rknqsvk0Tdpllgf61KCaE2DJhzlpbI4JEGRGYNagNAMiOCgsZefq03gzCQ==",
       "path": "microsoft.aspnetcore.components.webassembly/5.0.12",
       "hashPath": "microsoft.aspnetcore.components.webassembly.5.0.12.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.WebAssembly.Authentication/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-APmMSqo0ZKmDK9q2+F31nHgDG6AEguUei1ZxgeLwNu8LeuIZN3Inh5Xu1dzrpGQwckbyOpC4+z2CzJVVjMZp1Q==",
+      "path": "microsoft.aspnetcore.components.webassembly.authentication/5.0.0",
+      "hashPath": "microsoft.aspnetcore.components.webassembly.authentication.5.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Components.WebAssembly.Server/5.0.12": {
       "type": "package",
@@ -2879,7 +2936,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Components.Authorization/5.0.0.0": {
+    "Microsoft.AspNetCore.Components.Authorization.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

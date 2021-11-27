@@ -2,7 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using ToDo.Shared;
 using ToDo.Server.Services;
-
+using System.Threading.Tasks;
+using System.Security.Claims;
+using System.Linq;
 
 namespace Server.Controllers
 {   
@@ -19,10 +21,10 @@ namespace Server.Controllers
             _catService = categoryService;
         }
 
-        [HttpGet("")]
-        public ActionResult<List<Category>> GetCategories()
+        [HttpGet("{type}/{email}")]
+        public  List<Category> GetCategories(string type, string email)
         {            
-            return _catService.GetCategories();
+            return _catService.GetCategories(type, email);
         }
 
         [HttpGet("{id:length(24)}")]
@@ -32,13 +34,12 @@ namespace Server.Controllers
 
         [HttpPost]
         public Category CreateCategory(Category cat) {
-            //cat.Active = 1;
             _catService.PostCategory(cat);
 
             return cat;
         }
 
-        //[HttpPut]
+        
         [HttpPut("{id}")]
         public Category UpdateCategory(string id, Category cat){
             // Microsoft.JSRuntime.Invoke("alert", System.Text.Json.JsonSerializer.Serialize(cat));             

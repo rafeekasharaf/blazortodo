@@ -649,3 +649,9 @@ D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\obj\Debug\net5.0\build-gz\7knK3rgq.gz
 D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\obj\Debug\net5.0\RazorDeclaration\Shared\LoadingScreen.razor.g.cs
 D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\obj\Debug\net5.0\Razor\Shared\LoadingScreen.razor.g.cs
 D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\obj\Debug\net5.0\scopedcss\Shared\LoadingScreen.razor.rz.scp.css
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll.gz
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\obj\Debug\net5.0\build-gz\ZbTFC29r.gz
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll.gz
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll
+D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\obj\Debug\net5.0\build-gz\+h+ORA0+.gz

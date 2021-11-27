@@ -300,6 +300,18 @@ input[type="checkbox"] {
     padding-left: 5px;
     
 }
+.google-auth-container .card {
+    background-color: rgba(245, 245, 245, 1);
+    border: 0;
+}
+
+.google-auth-container .card-body {
+    padding: 0px;
+}
+
+
+
+
 
 .form-check .form-check-label input[type="checkbox"]+.input-helper:after {
     font-family: FontAwesome;
@@ -411,6 +423,9 @@ input[type="checkbox"] {
 } 
 
 @media (max-width: 480px) {
+    h5{
+        font-size: 1rem !important;
+    }
     .col-sm {
             -ms-flex-preferred-size:0;
             flex-basis: 0;
@@ -418,6 +433,7 @@ input[type="checkbox"] {
             flex-grow: 1;
             max-width: 100%
         }
+
     
         .col-sm-auto {
             -ms-flex: 0 0 auto;
@@ -510,6 +526,13 @@ input[type="checkbox"] {
     .add-text{
         width: 64%;
     }
+
+    .google-auth-container a {
+        font-size: 18px !important;
+    }
+    .google-auth-container img {
+        width: 24px !important;
+    }
 }
 
 @media (min-width:576px) {
@@ -518,6 +541,12 @@ input[type="checkbox"] {
     }
     .add-text{
         width: 70%;
+    }
+    .google-auth-container a {
+        font-size: 18px !important;
+    }
+    .google-auth-container img {
+        width: 24px !important;
     }
 }
   @media (min-width:768px) {

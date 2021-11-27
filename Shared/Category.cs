@@ -12,6 +12,8 @@ namespace ToDo.Shared
         [BsonElement]
         public string Title { get; set; }
         [BsonElement]
+        public string Email { get; set; }
+        [BsonElement]
         public int Sort { get; set; }
         [BsonElement]
         public int Active { get; set; } 

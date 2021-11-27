@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -7,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
 using ToDo.Server.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace ToDo.Server
 {
@@ -23,10 +25,25 @@ namespace ToDo.Server
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            // services.AddAuthentication(options =>{
+            //     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            // }).AddCookie()
+            services.AddAuthentication("Cookies")
+                .AddCookie(opt => {
+                    opt.Cookie.Name = "GoogleAuthCokkie";
+                    opt.LoginPath ="/auth/google-login";
+                })
 
+            .AddGoogle(options =>
+            {
+                options.ClientId = Configuration["Google:ClientId"];
+                options.ClientSecret = Configuration["Google:ClientSecret"];                
+            });
+            
             services.AddControllersWithViews();            
             services.AddRazorPages();
             services.AddScoped<CategoryService>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,10 +63,10 @@ namespace ToDo.Server
 
           //  app.UseHttpsRedirection();
             app.UseBlazorFrameworkFiles();
-            app.UseStaticFiles();
-
+            app.UseStaticFiles();            
             app.UseRouting();
-
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();

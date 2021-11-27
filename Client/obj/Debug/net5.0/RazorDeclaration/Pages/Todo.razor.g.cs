@@ -11,7 +11,6 @@ namespace ToDo.Client.Pages
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Components;
 #nullable restore
 #line 1 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
 using System.Net.Http;
@@ -63,27 +62,34 @@ using Microsoft.AspNetCore.Components.WebAssembly.Http;
 #nullable disable
 #nullable restore
 #line 8 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
-using Microsoft.JSInterop;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 9 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
-using ToDo.Client;
+using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 10 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
-using ToDo.Client.Shared;
+using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 11 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+using ToDo.Client;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+using ToDo.Client.Shared;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
 using Plk.Blazor.DragDrop;
 
 #line default
@@ -91,13 +97,34 @@ using Plk.Blazor.DragDrop;
 #nullable disable
 #nullable restore
 #line 3 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Pages\Todo.razor"
-using ToDo.Shared;
+using Microsoft.AspNetCore.Components;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 4 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Pages\Todo.razor"
+using Microsoft.AspNetCore.Components.Authorization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Pages\Todo.razor"
+using System.Security.Claims;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Pages\Todo.razor"
+using ToDo.Shared;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Pages\Todo.razor"
 using ToDo.Shared.Utils;
 
 #line default
@@ -113,8 +140,10 @@ using ToDo.Shared.Utils;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 146 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Pages\Todo.razor"
+#line 160 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Pages\Todo.razor"
        
+    [CascadingParameter]
+    public Task<AuthenticationState> authenticationState {get; set;}
       
     private string newTodo, newTodoTitle, updateTodoTitle, currentCatID;
     private Category[] categories ;
@@ -123,25 +152,39 @@ using ToDo.Shared.Utils;
     
     private bool ShowLoading { get; set; }
     private bool ShowEditBox { get; set; }= false;
-    
+    private bool ShowGoogleLoginWindow{ get; set;} = false;
 
     protected override async Task OnInitializedAsync()
     {
         ShowLoading = true;
-        ToDoList = new List<Category>();
-        categories = await Http.GetFromJsonAsync<Category[]>("api/category");
-        //await JSRuntime.InvokeVoidAsync("alert", System.Text.Json.JsonSerializer.Serialize(categories)); 
-        if (categories != null ) {
-            foreach (var category in categories){
-                if (category.ToDo != null){
-                    category.ToDo = category.ToDo.OrderBy(items => items.Completed).OrderByDescending(items=>items.Active).ToList();
-                }
-                 ToDoList.Add(category);
-            }
-             
-        } 
 
+        var authState = await authenticationState;
+        var user = authState.User;
+
+     //await JSRuntime.InvokeVoidAsync("alert", System.Text.Json.JsonSerializer.Serialize(user.Identity)); 
+
+        if (user.Identity.IsAuthenticated) {
+            ToDoList = new List<Category>();
+            categories = await Http.GetFromJsonAsync<Category[]>("api/category/email/"+user.Identity.Name);
+            //await JSRuntime.InvokeVoidAsync("alert", System.Text.Json.JsonSerializer.Serialize(categories)); 
+            if (categories != null ) {
+                foreach (var category in categories){
+                    if (category.ToDo != null){
+                        category.ToDo = category.ToDo.OrderBy(items => items.Completed).OrderByDescending(items=>items.Active).ToList();
+                    }
+                    ToDoList.Add(category);
+                }
+                
+            } 
+        }
+        else {
+            ShowGoogleLoginWindow = true;
+        }
+
+        
         ShowLoading = false;
+
+        
 
     }
 
@@ -181,11 +224,18 @@ using ToDo.Shared.Utils;
 
     private async Task AddTodoTitle()
     {
+
+        if (string.IsNullOrWhiteSpace(newTodoTitle)){
+            return;
+        }
+        var authState = await authenticationState;
+        var user = authState.User;
       
         newCat = new  Category {
             Title= newTodoTitle,
             Active= 1,
             Sort= 1,
+            Email=user.Identity.Name
         };
          newTodoTitle = "";
         //await JSRuntime.InvokeVoidAsync("alert", System.Text.Json.JsonSerializer.Serialize(TimeUtils.ToUnixTimeSeconds())); 
@@ -236,6 +286,10 @@ using ToDo.Shared.Utils;
     }
 
     private async Task AddTodoItem(Category cat, bool isUpdate) {
+        if (string.IsNullOrWhiteSpace(newTodo)) {
+            return;
+        }
+        
         newCat = new Category();
         newCat = cat;
         

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QL4bpySFG1CUygd9t7wlGDozMqGa97ejzxKDKZ68Zfsts7Usfzjk5dsDWEK44RDeP0jm2ALAWgYKUscweXRCoQ==",
+  "dgSpecHash": "bv4JIQqOksB2gv0DJxm4L4TMUO4Jp2VHqH4eEn9XSlO8KKlsWUv8p9uaNAveiLUGroSHQ7PF8xAFYrQ6R6bLwg==",
   "success": true,
   "projectFilePath": "D:\\USERS\\RAFEEK\\Work\\Blazor\\ToDo\\Client\\ToDo.Client.csproj",
   "expectedPackageFiles": [
@@ -8,9 +8,11 @@
     "C:\\Users\\T0347\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.12\\microsoft.aspnetcore.authorization.5.0.12.nupkg.sha512",
     "C:\\Users\\T0347\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.12\\microsoft.aspnetcore.components.5.0.12.nupkg.sha512",
     "C:\\Users\\T0347\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\5.0.12\\microsoft.aspnetcore.components.analyzers.5.0.12.nupkg.sha512",
+    "C:\\Users\\T0347\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\5.0.0\\microsoft.aspnetcore.components.authorization.5.0.0.nupkg.sha512",
     "C:\\Users\\T0347\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\5.0.12\\microsoft.aspnetcore.components.forms.5.0.12.nupkg.sha512",
     "C:\\Users\\T0347\\.nuget\\packages\\microsoft.aspnetcore.components.web\\5.0.12\\microsoft.aspnetcore.components.web.5.0.12.nupkg.sha512",
     "C:\\Users\\T0347\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\5.0.12\\microsoft.aspnetcore.components.webassembly.5.0.12.nupkg.sha512",
+    "C:\\Users\\T0347\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\5.0.0\\microsoft.aspnetcore.components.webassembly.authentication.5.0.0.nupkg.sha512",
     "C:\\Users\\T0347\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\5.0.12\\microsoft.aspnetcore.components.webassembly.devserver.5.0.12.nupkg.sha512",
     "C:\\Users\\T0347\\.nuget\\packages\\microsoft.aspnetcore.metadata\\5.0.12\\microsoft.aspnetcore.metadata.5.0.12.nupkg.sha512",
     "C:\\Users\\T0347\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

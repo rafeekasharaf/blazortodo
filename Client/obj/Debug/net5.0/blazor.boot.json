@@ -10,9 +10,11 @@
       "Plk.Blazor.DragDrop.dll": "sha256-xHFWgF6oDhzvyHwVxxAikU8pQdbllA2GZnPCV24UMno=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-KefVTFt9zMF8GsEnoLId5Ci6qnNyEsqZWyi5JcEe5Pk=",
       "Microsoft.AspNetCore.Components.dll": "sha256-NVwk8sK9cjPmLAK9bvFg42JyGngnUdFXgRxpSk+Ze0Q=",
+      "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-RETzcaqJB7uXmSqtgbNeKNNc5YC\/Ux+Ud\/XI\/\/VCR38=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-QBsYfxADgB3ZD1vV\/\/iGpcQ1qii\/piuCf1M2393Cbi4=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-vTi+DPwSYk8ZpPpJCVVufobA2N1PUS7UBLekS3431us=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-Gn5x+etSBJCU2\/tQFt87H3b\/Y0ZLbNk0zW\/4huun47A=",
+      "Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll": "sha256-TzJ8yXiAFdeuIRugRMsc6NiMKp6LDXSNjQLcXEklJZQ=",
       "Microsoft.AspNetCore.Metadata.dll": "sha256-yTy\/scQ91HigrkoanjNqa1ArtJwaqVAmmJ3SwjrcRTw=",
       "Microsoft.Extensions.Configuration.dll": "sha256-x9zYR1t1is\/fStNpBiQnXyPdMpLLcQcra3w4RXGSg4o=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-NYecKM0ZpUvzj4spvgi6xUu80rkx8PX7fiRok\/BNaHw=",
@@ -197,13 +199,13 @@
       "mscorlib.dll": "sha256-+dB3Q0YubUPF1oZDMVZn6ZCiRkzRomtLoq51T5FocJk=",
       "netstandard.dll": "sha256-dOHF0zANIyA4WS496iWrAkTuEFWSWrXJjZj2pQQHrMA=",
       "System.Private.CoreLib.dll": "sha256-C96+zv+mWW0XzMG520oRgAG1lHVY8xzWGc6oc6rFjws=",
-      "ToDo.Shared.dll": "sha256-vTxfCJFXqEQmOWt3YwBZORrZ+UU6vaCaAh5cO+TTHuA=",
-      "ToDo.Client.dll": "sha256-NUCrintTqJOTwrDmnsbp46vaa2wltNE4khqPAK28Nmw="
+      "ToDo.Shared.dll": "sha256-MPSYvYJNQPI2BgIu9rK6YGlvYHEm7XVvpFWQaYjafoY=",
+      "ToDo.Client.dll": "sha256-k+ZuHawm1TnOPrRewpxYWIKopd5eMECrkML7zdeLoaA="
     },
     "lazyAssembly": null,
     "pdb": {
-      "ToDo.Shared.pdb": "sha256-fqX\/RM1wNa9ZO0s\/HlaPG7SSxf5NhGPYpGVezLzacgg=",
-      "ToDo.Client.pdb": "sha256-jRAtvxnl9AjCeMbRXEewA6hF6vyrjE3hWFfOypFBU9I="
+      "ToDo.Shared.pdb": "sha256-DO879dqJZu0fujWt1xOtdaz00KqxpUsywyMr8Gxb5ps=",
+      "ToDo.Client.pdb": "sha256-soMfLyIVn+9\/fzx2CUnNGrc4d2XL+ccSp2JBKUKW9Kg="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-ir9YCVnnk7popgsYUkvitfGA4WpkP1ydPh\/ENHnxGys=",

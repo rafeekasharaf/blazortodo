@@ -63,28 +63,42 @@ using Microsoft.AspNetCore.Components.WebAssembly.Http;
 #nullable disable
 #nullable restore
 #line 8 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
-using Microsoft.JSInterop;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 9 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
-using ToDo.Client;
+using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 10 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
-using ToDo.Client.Shared;
+using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 11 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+using ToDo.Client;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
+using ToDo.Client.Shared;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\_Imports.razor"
 using Plk.Blazor.DragDrop;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Shared\MainLayout.razor"
+using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
@@ -96,6 +110,22 @@ using Plk.Blazor.DragDrop;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 34 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Shared\MainLayout.razor"
+      
+
+    private async Task LogoutUser()
+    {
+        await _httpClient.GetAsync("auth/logoutuser");
+        _navigationManager.NavigateTo("/", true);
+    }
+   
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient _httpClient { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager _navigationManager { get; set; }
     }
 }
 #pragma warning restore 1591

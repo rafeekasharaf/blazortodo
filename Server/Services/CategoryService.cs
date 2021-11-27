@@ -1,24 +1,40 @@
 
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
 using System.Collections.Generic;
-
+using System.Security.Claims;
+using System.Threading.Tasks;
 using ToDo.Shared;
 
 namespace ToDo.Server.Services
 {
-    public class CategoryService {
+    public class CategoryService 
+    {
 
         private IMongoCollection<Category> _category;
+        [CascadingParameter]
+        public Task<AuthenticationState> authenticationState {get; set;}
         public CategoryService(IConfiguration config)
         {
             var client = new MongoClient(config.GetConnectionString("MongoCloud"));
             var database = client.GetDatabase("RemindMe");
 
             _category = database.GetCollection<Category>("Category");
+
+           
         }
 
-       public List<Category> GetCategories() => _category.Find(category => true).ToList();//.OrderBy(category => category.Active).ThenByAscending(category=>category.Completed).ToList();
+        public List<Category> GetCategories(string type, string email) {
+           // var authState = await authenticationState;
+            //var user = authState.User;
+          // string loggedUserEmail = ClaimTypes.Email;
+          return _category.Find(category => category.Email == email).ToList();
+
+        }
+
+      // public List<Category> GetCategories() => _category.Find(category => true).ToList();//.OrderBy(category => category.Active).ThenByAscending(category=>category.Completed).ToList();
         public Category GetCategory(string id) => _category.Find(category => category.CategoryID == id).FirstOrDefault();
 
        /*  public List<Category> GetCategories() {

@@ -1,7 +1,11 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-eC\/HbKR5soWA9bWVT3+\/rElvkt+Gws4pjtNu7XfILwY=",
+      "hash": "sha256-pJQvSpzzXNlfQUjYVNgyMVCSbkbhkhhb5UM9Isl25h4=",
+      "url": "_content\/Microsoft.AspNetCore.Components.WebAssembly.Authentication\/AuthenticationService.js"
+    },
+    {
+      "hash": "sha256-tH\/5i0XoZBdqIOneFAsbVj1XVK3Gz\/4fAz5CdCstiYs=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -17,6 +21,10 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.dll"
     },
     {
+      "hash": "sha256-RETzcaqJB7uXmSqtgbNeKNNc5YC\/Ux+Ud\/XI\/\/VCR38=",
+      "url": "_framework\/Microsoft.AspNetCore.Components.Authorization.dll"
+    },
+    {
       "hash": "sha256-QBsYfxADgB3ZD1vV\/\/iGpcQ1qii\/piuCf1M2393Cbi4=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Forms.dll"
     },
@@ -27,6 +35,10 @@
     {
       "hash": "sha256-Gn5x+etSBJCU2\/tQFt87H3b\/Y0ZLbNk0zW\/4huun47A=",
       "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.dll"
+    },
+    {
+      "hash": "sha256-TzJ8yXiAFdeuIRugRMsc6NiMKp6LDXSNjQLcXEklJZQ=",
+      "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll"
     },
     {
       "hash": "sha256-yTy\/scQ91HigrkoanjNqa1ArtJwaqVAmmJ3SwjrcRTw=",
@@ -793,19 +805,19 @@
       "url": "_framework\/dotnet.5.0.12.js"
     },
     {
-      "hash": "sha256-vTxfCJFXqEQmOWt3YwBZORrZ+UU6vaCaAh5cO+TTHuA=",
+      "hash": "sha256-MPSYvYJNQPI2BgIu9rK6YGlvYHEm7XVvpFWQaYjafoY=",
       "url": "_framework\/ToDo.Shared.dll"
     },
     {
-      "hash": "sha256-fqX\/RM1wNa9ZO0s\/HlaPG7SSxf5NhGPYpGVezLzacgg=",
+      "hash": "sha256-DO879dqJZu0fujWt1xOtdaz00KqxpUsywyMr8Gxb5ps=",
       "url": "_framework\/ToDo.Shared.pdb"
     },
     {
-      "hash": "sha256-NUCrintTqJOTwrDmnsbp46vaa2wltNE4khqPAK28Nmw=",
+      "hash": "sha256-k+ZuHawm1TnOPrRewpxYWIKopd5eMECrkML7zdeLoaA=",
       "url": "_framework\/ToDo.Client.dll"
     },
     {
-      "hash": "sha256-jRAtvxnl9AjCeMbRXEewA6hF6vyrjE3hWFfOypFBU9I=",
+      "hash": "sha256-soMfLyIVn+9\/fzx2CUnNGrc4d2XL+ccSp2JBKUKW9Kg=",
       "url": "_framework\/ToDo.Client.pdb"
     },
     {
@@ -825,6 +837,10 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.dll.gz"
     },
     {
+      "hash": "sha256-xLQP5VjshJfn\/8xsgJlYRt4qh30NFp3rG4CUa1qrxiY=",
+      "url": "_framework\/Microsoft.AspNetCore.Components.Authorization.dll.gz"
+    },
+    {
       "hash": "sha256-NJtPtjFoKdjnlwk9AChJeB4ucNFspxKGiNDi3v9KEuA=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Forms.dll.gz"
     },
@@ -835,6 +851,10 @@
     {
       "hash": "sha256-TmUDO0jQ3gyI5LumhIkpti7Ux9QAXD49ty+cAO+Kvf8=",
       "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.dll.gz"
+    },
+    {
+      "hash": "sha256-pAHDUdHtHXmooRyZFoz7NXdfrcI74D4uR4lYBfvnvpQ=",
+      "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll.gz"
     },
     {
       "hash": "sha256-UOz4LNYEIPvh7l3j3sbiEZaSbUKr27m6X1Op\/p43JWQ=",
@@ -1601,11 +1621,11 @@
       "url": "_framework\/dotnet.5.0.12.js.gz"
     },
     {
-      "hash": "sha256-84gb3XrWZ9iCzYjg+KoUDmGDBSrcloIjewUy2ddLWQw=",
+      "hash": "sha256-ZSRAsY2KIh7IRKoQiJRuTYr9Qx\/JhhX+3JR3BpXvONM=",
       "url": "_framework\/ToDo.Shared.dll.gz"
     },
     {
-      "hash": "sha256-C7HDK9pQt9\/f7iaSYR3ZPx8k0mbITPNEqCgyaSJLiqE=",
+      "hash": "sha256-38zJLKunZ6alY25NT2u1mxD2oFL5E2SJ2sebfjzo400=",
       "url": "css\/app.css"
     },
     {
@@ -1681,13 +1701,13 @@
       "url": "manifest.json"
     },
     {
-      "hash": "sha256-1ew8brZtgU0pUB+fqc2J62TNb+77E19ORrDUjzgYmaQ=",
+      "hash": "sha256-VP48SUAu+SeGiLbj2ysv1LOA6FVeYLCcnyi2OsVOaLg=",
       "url": "ToDo.Client.styles.css"
     },
     {
-      "hash": "sha256-Xa92FRdy38NHcS7JpiT2AM4FKpER16AOgMF8DYdB+cg=",
+      "hash": "sha256-8x1n0CKriAMQUUN2qjyim8KSB6wOXpw0yG7xUHdULVs=",
       "url": "ToDo.Client.bundle.scp.css"
     }
   ],
-  "version": "pcj6RAgK"
+  "version": "bWK5IJP8"
 };
