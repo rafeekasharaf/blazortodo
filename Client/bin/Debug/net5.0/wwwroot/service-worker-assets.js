@@ -1681,6 +1681,10 @@
       "url": "favicon1.ico"
     },
     {
+      "hash": "sha256-T7vYqIAN\/3v4Vppz23hndP2sbsmVy\/y74jtO9KvugGk=",
+      "url": "google93cb46ae27f45f6d.html"
+    },
+    {
       "hash": "sha256-IpHFcQvs03lh6W54zoeJRG1jW+VnGmwymzxLoXtKX7Y=",
       "url": "icon-512_1.png"
     },
@@ -1709,5 +1713,5 @@
       "url": "ToDo.Client.bundle.scp.css"
     }
   ],
-  "version": "bWK5IJP8"
+  "version": "uePzG9yr"
 };
