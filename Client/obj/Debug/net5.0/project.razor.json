@@ -8,6 +8,39 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
+        "HashCode": 24978608,
+        "Kind": "Components.Component",
+        "Name": "ToDo.Client.App",
+        "AssemblyName": "ToDo.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ToDo.Client.App"
+        }
+      },
+      {
+        "HashCode": -1669204797,
+        "Kind": "Components.Component",
+        "Name": "ToDo.Client.App",
+        "AssemblyName": "ToDo.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ToDo.Client.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ToDo.Client.App",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -1559460945,
         "Kind": "Components.Component",
         "Name": "ToDo.Client.Pages.Counter",
@@ -226,39 +259,6 @@
         }
       },
       {
-        "HashCode": -178778126,
-        "Kind": "Components.Component",
-        "Name": "ToDo.Client.Shared.NavMenu",
-        "AssemblyName": "ToDo.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToDo.Client.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": 20932893,
-        "Kind": "Components.Component",
-        "Name": "ToDo.Client.Shared.NavMenu",
-        "AssemblyName": "ToDo.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ToDo.Client.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToDo.Client.Shared.NavMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1999154142,
         "Kind": "Components.Component",
         "Name": "ToDo.Client.Shared.MainLayout",
@@ -355,35 +355,35 @@
         }
       },
       {
-        "HashCode": 24978608,
+        "HashCode": -178778126,
         "Kind": "Components.Component",
-        "Name": "ToDo.Client.App",
+        "Name": "ToDo.Client.Shared.NavMenu",
         "AssemblyName": "ToDo.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "NavMenu"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToDo.Client.App"
+          "Common.TypeName": "ToDo.Client.Shared.NavMenu"
         }
       },
       {
-        "HashCode": -1669204797,
+        "HashCode": 20932893,
         "Kind": "Components.Component",
-        "Name": "ToDo.Client.App",
+        "Name": "ToDo.Client.Shared.NavMenu",
         "AssemblyName": "ToDo.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ToDo.Client.App"
+            "TagName": "ToDo.Client.Shared.NavMenu"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToDo.Client.App",
+          "Common.TypeName": "ToDo.Client.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

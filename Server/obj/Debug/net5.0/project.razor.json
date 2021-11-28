@@ -6635,6 +6635,39 @@
         }
       },
       {
+        "HashCode": 24978608,
+        "Kind": "Components.Component",
+        "Name": "ToDo.Client.App",
+        "AssemblyName": "ToDo.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ToDo.Client.App"
+        }
+      },
+      {
+        "HashCode": -1669204797,
+        "Kind": "Components.Component",
+        "Name": "ToDo.Client.App",
+        "AssemblyName": "ToDo.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ToDo.Client.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ToDo.Client.App",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -1559460945,
         "Kind": "Components.Component",
         "Name": "ToDo.Client.Pages.Counter",
