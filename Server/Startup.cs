@@ -98,6 +98,10 @@ namespace ToDo.Server
             {
                 ForwardedHeaders = ForwardedHeaders.XForwardedProto
             });
+            app.UseCookiePolicy(new CookiePolicyOptions()
+{
+    MinimumSameSitePolicy = SameSiteMode.Lax
+});
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
