@@ -88,20 +88,21 @@ namespace ToDo.Server
 
          //   app.UseDeveloperExceptionPage();
 
-           app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
             app.UseBlazorFrameworkFiles();
+            app.UseCookiePolicy(new CookiePolicyOptions()
+            {
+                MinimumSameSitePolicy = SameSiteMode.None
+            });
             app.UseStaticFiles();            
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-           /* app.UseForwardedHeaders(new ForwardedHeadersOptions
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
             {
                 ForwardedHeaders = ForwardedHeaders.XForwardedProto
             });
-            app.UseCookiePolicy(new CookiePolicyOptions()
-{
-    MinimumSameSitePolicy = SameSiteMode.Lax
-});*/
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
