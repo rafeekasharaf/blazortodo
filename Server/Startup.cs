@@ -46,6 +46,12 @@ namespace ToDo.Server
                 options.ClientSecret = Configuration["Google:ClientSecret"]; 
                            
             });
+            services.Configure<CookiePolicyOptions>(options =>
+    {
+        // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+        options.CheckConsentNeeded = context => true;
+        options.MinimumSameSitePolicy = SameSiteMode.None;
+    });
             
             services.AddControllersWithViews();            
             services.AddRazorPages();
@@ -90,10 +96,7 @@ namespace ToDo.Server
 
             app.UseHttpsRedirection();
             app.UseBlazorFrameworkFiles();
-            app.UseCookiePolicy(new CookiePolicyOptions()
-            {
-                MinimumSameSitePolicy = SameSiteMode.None
-            });
+            app.UseCookiePolicy();
             app.UseStaticFiles();            
             app.UseRouting();
             app.UseAuthentication();
