@@ -1,5 +1,6 @@
 @inherits LayoutComponentBase
 @using Microsoft.AspNetCore.Components.Authorization
+
 @inject NavigationManager _navigationManager
 @inject HttpClient _httpClient
 
@@ -27,7 +28,9 @@
        
        
         <div class="content ">
-            @Body
+            
+                @Body
+                    
         </div>
     </div>
 </div>

@@ -200,12 +200,12 @@
       "netstandard.dll": "sha256-dOHF0zANIyA4WS496iWrAkTuEFWSWrXJjZj2pQQHrMA=",
       "System.Private.CoreLib.dll": "sha256-C96+zv+mWW0XzMG520oRgAG1lHVY8xzWGc6oc6rFjws=",
       "ToDo.Shared.dll": "sha256-MPSYvYJNQPI2BgIu9rK6YGlvYHEm7XVvpFWQaYjafoY=",
-      "ToDo.Client.dll": "sha256-k+ZuHawm1TnOPrRewpxYWIKopd5eMECrkML7zdeLoaA="
+      "ToDo.Client.dll": "sha256-pM2S0BBmQlMV2N62yGAU0422UK2boYAIlpZ490jPKEY="
     },
     "lazyAssembly": null,
     "pdb": {
       "ToDo.Shared.pdb": "sha256-DO879dqJZu0fujWt1xOtdaz00KqxpUsywyMr8Gxb5ps=",
-      "ToDo.Client.pdb": "sha256-soMfLyIVn+9\/fzx2CUnNGrc4d2XL+ccSp2JBKUKW9Kg="
+      "ToDo.Client.pdb": "sha256-D3rR4cxGVdUUTLe0N9S2SfWJByjvuokN7A7IREh8HXY="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-ir9YCVnnk7popgsYUkvitfGA4WpkP1ydPh\/ENHnxGys=",

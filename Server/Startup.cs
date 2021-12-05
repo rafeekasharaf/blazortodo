@@ -38,7 +38,8 @@ namespace ToDo.Server
             .AddGoogle(options =>
             {
                 options.ClientId = Configuration["Google:ClientId"];
-                options.ClientSecret = Configuration["Google:ClientSecret"];                
+                options.ClientSecret = Configuration["Google:ClientSecret"]; 
+                           
             });
             
             services.AddControllersWithViews();            
@@ -61,6 +62,8 @@ namespace ToDo.Server
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseDeveloperExceptionPage();
 
           //  app.UseHttpsRedirection();
             app.UseBlazorFrameworkFiles();

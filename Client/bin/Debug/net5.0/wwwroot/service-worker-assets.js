@@ -5,7 +5,7 @@
       "url": "_content\/Microsoft.AspNetCore.Components.WebAssembly.Authentication\/AuthenticationService.js"
     },
     {
-      "hash": "sha256-tH\/5i0XoZBdqIOneFAsbVj1XVK3Gz\/4fAz5CdCstiYs=",
+      "hash": "sha256-frgCqyw4lJHqztP5vvLX26N68MRcXo\/muVNRwGML0wk=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -813,11 +813,11 @@
       "url": "_framework\/ToDo.Shared.pdb"
     },
     {
-      "hash": "sha256-k+ZuHawm1TnOPrRewpxYWIKopd5eMECrkML7zdeLoaA=",
+      "hash": "sha256-pM2S0BBmQlMV2N62yGAU0422UK2boYAIlpZ490jPKEY=",
       "url": "_framework\/ToDo.Client.dll"
     },
     {
-      "hash": "sha256-soMfLyIVn+9\/fzx2CUnNGrc4d2XL+ccSp2JBKUKW9Kg=",
+      "hash": "sha256-D3rR4cxGVdUUTLe0N9S2SfWJByjvuokN7A7IREh8HXY=",
       "url": "_framework\/ToDo.Client.pdb"
     },
     {
@@ -1713,5 +1713,5 @@
       "url": "ToDo.Client.bundle.scp.css"
     }
   ],
-  "version": "uePzG9yr"
+  "version": "yP0ui06l"
 };

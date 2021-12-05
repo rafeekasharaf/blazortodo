@@ -111,7 +111,7 @@ using Microsoft.AspNetCore.Components.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 34 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Shared\MainLayout.razor"
+#line 37 "D:\USERS\RAFEEK\Work\Blazor\ToDo\Client\Shared\MainLayout.razor"
       
 
     private async Task LogoutUser()
