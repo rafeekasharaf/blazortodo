@@ -44,14 +44,9 @@ namespace ToDo.Server
             {
                 options.ClientId = Configuration["Google:ClientId"];
                 options.ClientSecret = Configuration["Google:ClientSecret"]; 
-                           
+                options.CorrelationCookie.SameSite = SameSiteMode.Lax;
             });
-            services.Configure<CookiePolicyOptions>(options =>
-    {
-        // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-        options.CheckConsentNeeded = context => true;
-        options.MinimumSameSitePolicy = SameSiteMode.None;
-    });
+            
             
             services.AddControllersWithViews();            
             services.AddRazorPages();
