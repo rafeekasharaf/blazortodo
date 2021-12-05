@@ -88,7 +88,7 @@ namespace ToDo.Server
 
          //   app.UseDeveloperExceptionPage();
 
-          //  app.UseHttpsRedirection();
+           app.UseHttpsRedirection();
             app.UseBlazorFrameworkFiles();
             app.UseStaticFiles();            
             app.UseRouting();
