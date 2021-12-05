@@ -94,14 +94,14 @@ namespace ToDo.Server
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-            app.UseForwardedHeaders(new ForwardedHeadersOptions
+           /* app.UseForwardedHeaders(new ForwardedHeadersOptions
             {
                 ForwardedHeaders = ForwardedHeaders.XForwardedProto
             });
             app.UseCookiePolicy(new CookiePolicyOptions()
 {
     MinimumSameSitePolicy = SameSiteMode.Lax
-});
+});*/
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
