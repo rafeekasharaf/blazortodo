@@ -1,0 +1,15 @@
+{
+  "name": "RemindMe",
+  "short_name": "RemindMe",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#28a745",
+  "icons": [
+    {
+      "src": "icon-513.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
